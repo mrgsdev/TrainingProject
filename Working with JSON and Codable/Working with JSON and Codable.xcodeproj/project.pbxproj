@@ -16,6 +16,7 @@
 		429E19CF2865A61C000BB8A6 /* KivaLoanTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E19CE2865A61C000BB8A6 /* KivaLoanTableViewController.swift */; };
 		429E19D12865A637000BB8A6 /* KivaLoanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E19D02865A637000BB8A6 /* KivaLoanTableViewCell.swift */; };
 		429E19D32865A7DE000BB8A6 /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E19D22865A7DE000BB8A6 /* Loan.swift */; };
+		429E19D52865A9C5000BB8A6 /* TableDDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429E19D42865A9C5000BB8A6 /* TableDDS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		429E19CE2865A61C000BB8A6 /* KivaLoanTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaLoanTableViewController.swift; sourceTree = "<group>"; };
 		429E19D02865A637000BB8A6 /* KivaLoanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KivaLoanTableViewCell.swift; sourceTree = "<group>"; };
 		429E19D22865A7DE000BB8A6 /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		429E19D42865A9C5000BB8A6 /* TableDDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDDS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				429E19C32865A4C8000BB8A6 /* Assets.xcassets */,
 				429E19C52865A4C8000BB8A6 /* LaunchScreen.storyboard */,
 				429E19CE2865A61C000BB8A6 /* KivaLoanTableViewController.swift */,
+				429E19D42865A9C5000BB8A6 /* TableDDS.swift */,
 				429E19D02865A637000BB8A6 /* KivaLoanTableViewCell.swift */,
 				429E19C82865A4C8000BB8A6 /* Info.plist */,
 			);
@@ -150,6 +153,7 @@
 				429E19CF2865A61C000BB8A6 /* KivaLoanTableViewController.swift in Sources */,
 				429E19D32865A7DE000BB8A6 /* Loan.swift in Sources */,
 				429E19BF2865A4C7000BB8A6 /* ViewController.swift in Sources */,
+				429E19D52865A9C5000BB8A6 /* TableDDS.swift in Sources */,
 				429E19D12865A637000BB8A6 /* KivaLoanTableViewCell.swift in Sources */,
 				429E19BB2865A4C7000BB8A6 /* AppDelegate.swift in Sources */,
 				429E19BD2865A4C7000BB8A6 /* SceneDelegate.swift in Sources */,
