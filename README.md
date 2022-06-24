@@ -8,3 +8,7 @@
 ![tableview](https://user-images.githubusercontent.com/107209053/175321430-7710cf8b-d55e-4169-ab15-b8ffd11b74ff.png)
 ```
 ```
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Animating%20Table%20View%20Cells)
+![r](https://user-images.githubusercontent.com/107209053/175327328-b57fbf9e-2c5d-465f-90bd-d1de7b0b6176.png)
+```
+```
