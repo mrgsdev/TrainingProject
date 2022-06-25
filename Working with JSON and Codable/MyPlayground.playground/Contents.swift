@@ -108,3 +108,22 @@ import UIKit
 //}
 
 
+//MARK: - Example 4 (Working with Arrays)
+let json = """
+    [{
+    "name": "John Davis",
+    "location": {
+    "country": "Paraguay",
+    },
+    "use": "to buy a new collection of clothes to stock her shop before the holidays." ,
+    "loan_amount": 150
+    },
+    {
+    "name": "Las Margaritas Group",
+    "location": {
+            "country": "Colombia",
+    },
+    "use": "to purchase coal in large quantities for resale.",
+    "loan_amount": 200
+}]
+"""
