@@ -14,3 +14,9 @@
 ```
 # [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Working%20with%20JSON%20and%20Codable)
 ![Working with JSON and Codable](https://user-images.githubusercontent.com/107209053/175495077-fb51d9d4-9ddd-4440-959c-3f205d678741.png)
+```
+```
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Working%20with%20Email%20and%20Attachments)
+![Working with Email and Attachments](https://user-images.githubusercontent.com/107209053/175815351-34f17d1c-165d-4f33-9fc9-78407568e804.png)
+```
+```
