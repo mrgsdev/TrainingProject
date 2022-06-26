@@ -109,13 +109,40 @@ import UIKit
 
 
 //MARK: - Example 4 (Working with Arrays)
-let json = """
+
+struct Loan: Hashable, Codable {
+    var name: String
+    var country: String
+    var use: String
+    var amount: Int
+    enum CodingKeys: String, CodingKey {
+        case name
+        case country = "location"
+        case use
+        case amount = "loan_amount"
+    }
+    enum LocationKeys: String, CodingKey {
+        case country
+    }
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decode(String.self, forKey: .name)
+        let location = try values.nestedContainer(keyedBy: LocationKeys.self, forKey: .country)
+        country = try location.decode(String.self, forKey: .country)
+        use = try values.decode(String.self, forKey: .use)
+        amount = try values.decode(Int.self, forKey: .amount)
+    }
+}
+struct LoanDataStore: Codable {
+    var loans: [Loan]
+}
+let jsonfile = """
     [{
     "name": "John Davis",
     "location": {
     "country": "Paraguay",
     },
-    "use": "to buy a new collection of clothes to stock her shop before the holidays." ,
+    "use": "to buy a new ." ,
     "loan_amount": 150
     },
     {
@@ -127,3 +154,12 @@ let json = """
     "loan_amount": 200
 }]
 """
+let decoder = JSONDecoder()
+if let jsonData = jsonfile.data(using: .utf8) {
+    do {
+        let loans = try decoder.decode([Loan].self, from: jsonData)
+        print(loans)
+    } catch {
+        print(error)
+    }
+}
