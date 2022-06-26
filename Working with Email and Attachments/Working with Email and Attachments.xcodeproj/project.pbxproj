@@ -13,6 +13,13 @@
 		4271A33F28688B1000B755D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4271A33D28688B1000B755D6 /* Main.storyboard */; };
 		4271A34128688B1100B755D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4271A34028688B1100B755D6 /* Assets.xcassets */; };
 		4271A34428688B1100B755D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4271A34228688B1100B755D6 /* LaunchScreen.storyboard */; };
+		4271A34C28688B7500B755D6 /* AttachmentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4271A34B28688B7500B755D6 /* AttachmentTableViewController.swift */; };
+		4271A36F28688C4E00B755D6 /* foggy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36928688C4D00B755D6 /* foggy.jpg */; };
+		4271A37028688C4E00B755D6 /* Why Appcoda.doc in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36A28688C4D00B755D6 /* Why Appcoda.doc */; };
+		4271A37128688C4E00B755D6 /* Hello World.ppt in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36B28688C4D00B755D6 /* Hello World.ppt */; };
+		4271A37228688C4E00B755D6 /* camera-photo-tips.html in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36C28688C4D00B755D6 /* camera-photo-tips.html */; };
+		4271A37328688C4E00B755D6 /* 10 Great iPhone Tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36D28688C4D00B755D6 /* 10 Great iPhone Tips.pdf */; };
+		4271A37428688C4E00B755D6 /* no more complaint.png in Resources */ = {isa = PBXBuildFile; fileRef = 4271A36E28688C4E00B755D6 /* no more complaint.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		4271A34028688B1100B755D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4271A34328688B1100B755D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4271A34528688B1100B755D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4271A34B28688B7500B755D6 /* AttachmentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentTableViewController.swift; sourceTree = "<group>"; };
+		4271A36928688C4D00B755D6 /* foggy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foggy.jpg; sourceTree = "<group>"; };
+		4271A36A28688C4D00B755D6 /* Why Appcoda.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Why Appcoda.doc"; sourceTree = "<group>"; };
+		4271A36B28688C4D00B755D6 /* Hello World.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hello World.ppt"; sourceTree = "<group>"; };
+		4271A36C28688C4D00B755D6 /* camera-photo-tips.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "camera-photo-tips.html"; sourceTree = "<group>"; };
+		4271A36D28688C4D00B755D6 /* 10 Great iPhone Tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10 Great iPhone Tips.pdf"; sourceTree = "<group>"; };
+		4271A36E28688C4E00B755D6 /* no more complaint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no more complaint.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,30 @@
 		4271A33628688B1000B755D6 /* Working with Email and Attachments */ = {
 			isa = PBXGroup;
 			children = (
+				4271A36828688C4500B755D6 /* Attachments */,
 				4271A33728688B1000B755D6 /* AppDelegate.swift */,
 				4271A33928688B1000B755D6 /* SceneDelegate.swift */,
 				4271A33B28688B1000B755D6 /* ViewController.swift */,
 				4271A33D28688B1000B755D6 /* Main.storyboard */,
+				4271A34B28688B7500B755D6 /* AttachmentTableViewController.swift */,
 				4271A34028688B1100B755D6 /* Assets.xcassets */,
 				4271A34228688B1100B755D6 /* LaunchScreen.storyboard */,
 				4271A34528688B1100B755D6 /* Info.plist */,
 			);
 			path = "Working with Email and Attachments";
+			sourceTree = "<group>";
+		};
+		4271A36828688C4500B755D6 /* Attachments */ = {
+			isa = PBXGroup;
+			children = (
+				4271A36D28688C4D00B755D6 /* 10 Great iPhone Tips.pdf */,
+				4271A36C28688C4D00B755D6 /* camera-photo-tips.html */,
+				4271A36928688C4D00B755D6 /* foggy.jpg */,
+				4271A36B28688C4D00B755D6 /* Hello World.ppt */,
+				4271A36E28688C4E00B755D6 /* no more complaint.png */,
+				4271A36A28688C4D00B755D6 /* Why Appcoda.doc */,
+			);
+			name = Attachments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +154,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4271A36F28688C4E00B755D6 /* foggy.jpg in Resources */,
+				4271A37028688C4E00B755D6 /* Why Appcoda.doc in Resources */,
+				4271A37228688C4E00B755D6 /* camera-photo-tips.html in Resources */,
 				4271A34428688B1100B755D6 /* LaunchScreen.storyboard in Resources */,
+				4271A37128688C4E00B755D6 /* Hello World.ppt in Resources */,
 				4271A34128688B1100B755D6 /* Assets.xcassets in Resources */,
 				4271A33F28688B1000B755D6 /* Main.storyboard in Resources */,
+				4271A37328688C4E00B755D6 /* 10 Great iPhone Tips.pdf in Resources */,
+				4271A37428688C4E00B755D6 /* no more complaint.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +175,7 @@
 			files = (
 				4271A33C28688B1000B755D6 /* ViewController.swift in Sources */,
 				4271A33828688B1000B755D6 /* AppDelegate.swift in Sources */,
+				4271A34C28688B7500B755D6 /* AttachmentTableViewController.swift in Sources */,
 				4271A33A28688B1000B755D6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
