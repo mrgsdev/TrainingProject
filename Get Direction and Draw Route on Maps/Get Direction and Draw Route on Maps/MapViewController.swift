@@ -9,17 +9,19 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-    
+    @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var mapView: MKMapView!
     var currentPlacemark: CLPlacemark? //  Get the Route info
     var restaurant:Restaurant!
     let locationManager = CLLocationManager()
+    var currentTransportType = MKDirectionsTransportType.automobile
     override func viewDidLoad() {
         super.viewDidLoad()
+        segmentedControl.isHidden = true
         mapView.showsUserLocation = true
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
+        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { [self] placemarks, error in
             if let error = error {
                 print(error)
                 return
@@ -42,7 +44,7 @@ class MapViewController: UIViewController {
                     self.mapView.selectAnnotation(annotation, animated: true)
                 }
             }
-            
+            segmentedControl.addTarget(self, action: #selector(self.showDirection), for: .valueChanged)
         })
         mapView.delegate = self
         mapView.showsCompass = true
@@ -57,15 +59,21 @@ class MapViewController: UIViewController {
         }
     }
     @IBAction func showDirection(sender: UIButton) {
-            guard let currentPlacemark = currentPlacemark else {
-                return
-            }
+        switch segmentedControl.selectedSegmentIndex {
+        case 0: currentTransportType = .automobile
+        case 1: currentTransportType = .walking
+        default: break
+        }
+        segmentedControl.isHidden = false
+        guard let currentPlacemark = currentPlacemark else {
+            return
+        }
         let directionRequest = MKDirections.Request()
         // Set the source and destination of the route
         directionRequest.source = MKMapItem.forCurrentLocation()
         let destinationPlacemark = MKPlacemark(placemark: currentPlacemark)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
-        directionRequest.transportType = MKDirectionsTransportType.automobile
+        directionRequest.transportType = currentTransportType
         // Calculate the direction
         let directions = MKDirections(request: directionRequest)
         directions.calculate { (routeResponse, routeError) -> Void in
@@ -76,7 +84,14 @@ class MapViewController: UIViewController {
                 return
             }
             let route = routeResponse.routes[0]
-            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads) }
+            self.mapView.removeOverlays(self.mapView.overlays)
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
+            
+            let rect = route.polyline.boundingMapRect
+            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            
+        }
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -136,6 +151,7 @@ extension MapViewController: MKMapViewDelegate {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.blue
         renderer.lineWidth = 3.0
+        renderer.strokeColor = (currentTransportType == .automobile) ? UIColor.systemBlue : UIColor.systemOrange
         return renderer
     }
 }
