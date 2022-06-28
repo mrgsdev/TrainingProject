@@ -9,9 +9,9 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
-
-    @IBOutlet var mapView: MKMapView!
     
+    @IBOutlet var mapView: MKMapView!
+    var currentPlacemark: CLPlacemark? //  Get the Route info
     var restaurant:Restaurant!
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class MapViewController: UIViewController {
             if let placemarks = placemarks {
                 // Get the first placemark
                 let placemark = placemarks[0]
-                
+                self.currentPlacemark = placemark
                 // Add annotation
                 let annotation = MKPointAnnotation()
                 annotation.title = self.restaurant.name
@@ -44,19 +44,39 @@ class MapViewController: UIViewController {
             }
             
         })
+        mapView.delegate = self
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = true
+        
+        
         // Request for a user's authorization for location services
         locationManager.requestWhenInUseAuthorization()
         let status = CLLocationManager.authorizationStatus()
         if status == CLAuthorizationStatus.authorizedWhenInUse { mapView.showsUserLocation = true
         }
-        mapView.delegate = self
-        mapView.showsCompass = true
-        mapView.showsScale = true
-        mapView.showsTraffic = true
-    
     }
     @IBAction func showDirection(sender: UIButton) {
-        
+            guard let currentPlacemark = currentPlacemark else {
+                return
+            }
+        let directionRequest = MKDirections.Request()
+        // Set the source and destination of the route
+        directionRequest.source = MKMapItem.forCurrentLocation()
+        let destinationPlacemark = MKPlacemark(placemark: currentPlacemark)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
+        directionRequest.transportType = MKDirectionsTransportType.automobile
+        // Calculate the direction
+        let directions = MKDirections(request: directionRequest)
+        directions.calculate { (routeResponse, routeError) -> Void in
+            guard let routeResponse = routeResponse else {
+                if let routeError = routeError {
+                    print("Error: \(routeError)")
+                }
+                return
+            }
+            let route = routeResponse.routes[0]
+            self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads) }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -64,8 +84,8 @@ class MapViewController: UIViewController {
     }
     
     // MARK: - MKMapViewDelegate methods
-
-   
+    
+    
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -90,7 +110,7 @@ extension MapViewController: MKMapViewDelegate {
             
             markerAnnotationView?.glyphText = "😋"
             markerAnnotationView?.markerTintColor = UIColor.orange
-        
+            
             annotationView = markerAnnotationView
             
         } else {
@@ -109,7 +129,13 @@ extension MapViewController: MKMapViewDelegate {
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
-            
+        
         return annotationView
+    }
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = UIColor.blue
+        renderer.lineWidth = 3.0
+        return renderer
     }
 }
