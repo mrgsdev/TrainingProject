@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController {
+    var currentRoute: MKRoute?
     @IBOutlet var segmentedControl: UISegmentedControl!
     @IBOutlet var mapView: MKMapView!
     var currentPlacemark: CLPlacemark? //  Get the Route info
@@ -84,9 +85,10 @@ class MapViewController: UIViewController {
                 return
             }
             let route = routeResponse.routes[0]
+            self.currentRoute = route
             self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
-            
+           
             let rect = route.polyline.boundingMapRect
             self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
             
@@ -98,9 +100,18 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - MKMapViewDelegate methods
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController. // Pass the selected object to the new view controller.
+        if segue.identifier == "showSteps" {
+            let routeTableViewController = segue.destination.children[0] as! RouteTableViewController
+            if let steps = currentRoute?.steps {
+                routeTableViewController.routeSteps = steps
+            }
+            
+        }
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -144,7 +155,7 @@ extension MapViewController: MKMapViewDelegate {
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
-        
+        annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         return annotationView
     }
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
@@ -153,5 +164,9 @@ extension MapViewController: MKMapViewDelegate {
         renderer.lineWidth = 3.0
         renderer.strokeColor = (currentTransportType == .automobile) ? UIColor.systemBlue : UIColor.systemOrange
         return renderer
+    }
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        performSegue(withIdentifier: "showSteps", sender: view)
+        
     }
 }

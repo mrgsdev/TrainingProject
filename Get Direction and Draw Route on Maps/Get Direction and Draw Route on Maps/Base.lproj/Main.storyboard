@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -57,10 +58,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="o1y-a8-nma">
-                                <rect key="frame" x="270" y="831" width="131" height="32"/>
+                                <rect key="frame" x="316" y="831" width="85" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="" image="car" catalog="system"/>
+                                    <segment title="" image="figure.walk" catalog="system"/>
                                 </segments>
                             </segmentedControl>
                         </subviews>
@@ -82,12 +83,48 @@
                     <connections>
                         <outlet property="mapView" destination="Aht-S4-SLx" id="osu-rW-cWk"/>
                         <outlet property="segmentedControl" destination="o1y-a8-nma" id="u1a-rn-Ena"/>
+                        <segue destination="0uE-H8-wWG" kind="presentation" identifier="showSteps" id="hrV-sq-YeR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMz-GZ-uhB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NuP-T6-Qfv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1829.5999999999999" y="42.728635682158924"/>
+        </scene>
+        <!--Steps-->
+        <scene sceneID="WUs-ho-2Bv">
+            <objects>
+                <tableViewController id="CXR-Zu-1SH" customClass="RouteTableViewController" customModule="Get_Direction_and_Draw_Route_on_Maps" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="O3K-Hz-Yr8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="33R-uH-ngO">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="33R-uH-ngO" id="jxn-f1-gmI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CXR-Zu-1SH" id="0K2-fw-0fM"/>
+                            <outlet property="delegate" destination="CXR-Zu-1SH" id="irS-iN-WK4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Steps" id="WIa-Gx-nmu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="mzE-1v-2pG">
+                            <connections>
+                                <action selector="close" destination="CXR-Zu-1SH" id="gP2-bl-iTO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0Q-MK-gp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3953.6231884057975" y="62.946428571428569"/>
         </scene>
         <!--Food Map-->
         <scene sceneID="KVU-Yg-XRq">
@@ -139,9 +176,33 @@
             </objects>
             <point key="canvasLocation" x="93.599999999999994" y="42.728635682158924"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dTY-OD-2OB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0uE-H8-wWG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="w81-9e-OUY"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSI-Zd-NYo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CXR-Zu-1SH" kind="relationship" relationship="rootViewController" id="AuR-3Y-3T4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUJ-OU-4ym" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2952" y="42"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="car" catalog="system" width="128" height="93"/>
+        <image name="figure.walk" catalog="system" width="95" height="128"/>
         <image name="safari" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

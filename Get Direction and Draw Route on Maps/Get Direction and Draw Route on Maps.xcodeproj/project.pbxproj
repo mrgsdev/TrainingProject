@@ -17,6 +17,7 @@
 		4291CA312869F6BE00AFFC7F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291CA302869F6BE00AFFC7F /* MapViewController.swift */; };
 		4291CA332869F6D800AFFC7F /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4291CA322869F6D800AFFC7F /* RestaurantTableViewController.swift */; };
 		4291CA362869F77D00AFFC7F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4291CA352869F77D00AFFC7F /* MapKit.framework */; };
+		42DC53DA286C4CEE00EFD3F5 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DC53D9286C4CEE00EFD3F5 /* RouteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4291CA302869F6BE00AFFC7F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4291CA322869F6D800AFFC7F /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		4291CA352869F77D00AFFC7F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		42DC53D9286C4CEE00EFD3F5 /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				4291CA1C2869F5E000AFFC7F /* SceneDelegate.swift */,
 				4291CA1E2869F5E000AFFC7F /* ViewController.swift */,
 				4291CA202869F5E000AFFC7F /* Main.storyboard */,
+				42DC53D9286C4CEE00EFD3F5 /* RouteTableViewController.swift */,
 				4291CA2E2869F6A800AFFC7F /* Restaurant.swift */,
 				4291CA302869F6BE00AFFC7F /* MapViewController.swift */,
 				4291CA322869F6D800AFFC7F /* RestaurantTableViewController.swift */,
@@ -163,6 +166,7 @@
 				4291CA1F2869F5E000AFFC7F /* ViewController.swift in Sources */,
 				4291CA332869F6D800AFFC7F /* RestaurantTableViewController.swift in Sources */,
 				4291CA1B2869F5E000AFFC7F /* AppDelegate.swift in Sources */,
+				42DC53DA286C4CEE00EFD3F5 /* RouteTableViewController.swift in Sources */,
 				4291CA312869F6BE00AFFC7F /* MapViewController.swift in Sources */,
 				4291CA1D2869F5E000AFFC7F /* SceneDelegate.swift in Sources */,
 			);
