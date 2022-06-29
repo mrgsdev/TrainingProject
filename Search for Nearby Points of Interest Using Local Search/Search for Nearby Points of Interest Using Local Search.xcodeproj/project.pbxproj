@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420BA85A286CEF1700D3B6E7 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BA859286CEF1700D3B6E7 /* RestaurantTableViewController.swift */; };
+		420BA85C286CEF3200D3B6E7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BA85B286CEF3200D3B6E7 /* MapViewController.swift */; };
+		420BA85E286CEF5000D3B6E7 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BA85D286CEF5000D3B6E7 /* Restaurant.swift */; };
+		420BA860286CEF9D00D3B6E7 /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420BA85F286CEF9D00D3B6E7 /* RouteTableViewController.swift */; };
+		420BA863286CF04800D3B6E7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 420BA862286CF04800D3B6E7 /* MapKit.framework */; };
 		420FD9DE286C852F001E9ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FD9DD286C852F001E9ECF /* AppDelegate.swift */; };
 		420FD9E0286C852F001E9ECF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FD9DF286C852F001E9ECF /* SceneDelegate.swift */; };
-		420FD9E2286C852F001E9ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420FD9E1286C852F001E9ECF /* ViewController.swift */; };
 		420FD9E5286C852F001E9ECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD9E3286C852F001E9ECF /* Main.storyboard */; };
 		420FD9E7286C8530001E9ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420FD9E6286C8530001E9ECF /* Assets.xcassets */; };
 		420FD9EA286C8530001E9ECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420FD9E8286C8530001E9ECF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		420BA859286CEF1700D3B6E7 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		420BA85B286CEF3200D3B6E7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		420BA85D286CEF5000D3B6E7 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		420BA85F286CEF9D00D3B6E7 /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
+		420BA862286CF04800D3B6E7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		420FD9DA286C852F001E9ECF /* Search for Nearby Points of Interest Using Local Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Search for Nearby Points of Interest Using Local Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		420FD9DD286C852F001E9ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		420FD9DF286C852F001E9ECF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		420FD9E1286C852F001E9ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		420FD9E4286C852F001E9ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		420FD9E6286C8530001E9ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		420FD9E9286C8530001E9ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420BA863286CF04800D3B6E7 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		420BA861286CF04800D3B6E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				420BA862286CF04800D3B6E7 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		420FD9D1286C852F001E9ECF = {
 			isa = PBXGroup;
 			children = (
 				420FD9DC286C852F001E9ECF /* Search for Nearby Points of Interest Using Local Search */,
 				420FD9DB286C852F001E9ECF /* Products */,
+				420BA861286CF04800D3B6E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +76,11 @@
 			children = (
 				420FD9DD286C852F001E9ECF /* AppDelegate.swift */,
 				420FD9DF286C852F001E9ECF /* SceneDelegate.swift */,
-				420FD9E1286C852F001E9ECF /* ViewController.swift */,
 				420FD9E3286C852F001E9ECF /* Main.storyboard */,
+				420BA85F286CEF9D00D3B6E7 /* RouteTableViewController.swift */,
+				420BA85D286CEF5000D3B6E7 /* Restaurant.swift */,
+				420BA85B286CEF3200D3B6E7 /* MapViewController.swift */,
+				420BA859286CEF1700D3B6E7 /* RestaurantTableViewController.swift */,
 				420FD9E6286C8530001E9ECF /* Assets.xcassets */,
 				420FD9E8286C8530001E9ECF /* LaunchScreen.storyboard */,
 				420FD9EB286C8530001E9ECF /* Info.plist */,
@@ -138,9 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				420FD9E2286C852F001E9ECF /* ViewController.swift in Sources */,
+				420BA85E286CEF5000D3B6E7 /* Restaurant.swift in Sources */,
 				420FD9DE286C852F001E9ECF /* AppDelegate.swift in Sources */,
 				420FD9E0286C852F001E9ECF /* SceneDelegate.swift in Sources */,
+				420BA85A286CEF1700D3B6E7 /* RestaurantTableViewController.swift in Sources */,
+				420BA85C286CEF3200D3B6E7 /* MapViewController.swift in Sources */,
+				420BA860286CEF9D00D3B6E7 /* RouteTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +314,7 @@
 				DEVELOPMENT_TEAM = 9C39N38483;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Search for Nearby Points of Interest Using Local Search/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to find out your current location in order to compute the route";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +343,7 @@
 				DEVELOPMENT_TEAM = 9C39N38483;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Search for Nearby Points of Interest Using Local Search/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to find out your current location in order to compute the route";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
