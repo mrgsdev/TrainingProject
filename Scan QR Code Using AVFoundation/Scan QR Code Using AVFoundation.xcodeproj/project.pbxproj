@@ -13,6 +13,8 @@
 		42C6F6F0286E4E2F00D55A29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C6F6EE286E4E2F00D55A29 /* Main.storyboard */; };
 		42C6F6F2286E4E3000D55A29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C6F6F1286E4E3000D55A29 /* Assets.xcassets */; };
 		42C6F6F5286E4E3000D55A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C6F6F3286E4E3000D55A29 /* LaunchScreen.storyboard */; };
+		42C6F6FD286E4E7B00D55A29 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6F6FC286E4E7B00D55A29 /* QRCodeViewController.swift */; };
+		42C6F6FF286E4E8900D55A29 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C6F6FE286E4E8900D55A29 /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		42C6F6F1286E4E3000D55A29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C6F6F4286E4E3000D55A29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42C6F6F6286E4E3000D55A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C6F6FC286E4E7B00D55A29 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		42C6F6FE286E4E8900D55A29 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				42C6F6EA286E4E2F00D55A29 /* SceneDelegate.swift */,
 				42C6F6EC286E4E2F00D55A29 /* ViewController.swift */,
 				42C6F6EE286E4E2F00D55A29 /* Main.storyboard */,
+				42C6F6FC286E4E7B00D55A29 /* QRCodeViewController.swift */,
+				42C6F6FE286E4E8900D55A29 /* QRScannerController.swift */,
 				42C6F6F1286E4E3000D55A29 /* Assets.xcassets */,
 				42C6F6F3286E4E3000D55A29 /* LaunchScreen.storyboard */,
 				42C6F6F6286E4E3000D55A29 /* Info.plist */,
@@ -140,6 +146,8 @@
 			files = (
 				42C6F6ED286E4E2F00D55A29 /* ViewController.swift in Sources */,
 				42C6F6E9286E4E2F00D55A29 /* AppDelegate.swift in Sources */,
+				42C6F6FF286E4E8900D55A29 /* QRScannerController.swift in Sources */,
+				42C6F6FD286E4E7B00D55A29 /* QRCodeViewController.swift in Sources */,
 				42C6F6EB286E4E2F00D55A29 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
