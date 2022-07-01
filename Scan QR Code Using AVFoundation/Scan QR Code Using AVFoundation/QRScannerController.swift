@@ -10,6 +10,21 @@ import AVFoundation
 class QRScannerController: UIViewController {
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
+    private let supportedCodeTypes = [
+        AVMetadataObject.ObjectType.upce,
+        AVMetadataObject.ObjectType.code39,
+        AVMetadataObject.ObjectType.code39Mod43,
+        AVMetadataObject.ObjectType.code93,
+        AVMetadataObject.ObjectType.code128,
+        AVMetadataObject.ObjectType.ean8,
+        AVMetadataObject.ObjectType.ean13,
+        AVMetadataObject.ObjectType.aztec,
+        AVMetadataObject.ObjectType.pdf417,
+        AVMetadataObject.ObjectType.itf14,
+        AVMetadataObject.ObjectType.dataMatrix,
+        AVMetadataObject.ObjectType.interleaved2of5,
+        AVMetadataObject.ObjectType.qr
+    ]
     
     var captureSession = AVCaptureSession()
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
@@ -29,7 +44,25 @@ class QRScannerController: UIViewController {
     
 }
 extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
-    
+    func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+        // Check if the metadataObjects array is not nil and it contains at least one object.
+        if metadataObjects.count == 0 {
+            qrCodeFrameView?.frame = CGRect.zero
+            messageLabel.text = "No QR code is detected"
+            return
+        }
+        // Get the metadata object.
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        if supportedCodeTypes.contains(metadataObj.type) {
+            // If the found metadata is equal to the QR code metadata (or barcode) then update the status label's text and set the bounds
+            let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
+            qrCodeFrameView?.frame = barCodeObject!.bounds
+            
+            if metadataObj.stringValue != nil {
+                messageLabel.text = metadataObj.stringValue
+            }
+        }
+    }
 }
 extension QRScannerController {
     
@@ -52,7 +85,7 @@ extension QRScannerController {
             
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+            captureMetadataOutput.metadataObjectTypes = supportedCodeTypes // [AVMetadataObject.ObjectType.qr]
         } catch {
             // If any error occurs, simply print it out and don't continue any more. print(error)
             return
@@ -64,5 +97,16 @@ extension QRScannerController {
         view.layer.addSublayer(videoPreviewLayer!)
         // Start video capture.
         captureSession.startRunning()
+        // Move the message label and top bar to the front
+        view.bringSubviewToFront(messageLabel)
+        view.bringSubviewToFront(topbar)
+        // Initialize QR Code Frame to highlight the QR code
+        qrCodeFrameView = UIView()
+        if let qrCodeFrameView = qrCodeFrameView {
+            qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
+            qrCodeFrameView.layer.borderWidth = 2
+            view.addSubview(qrCodeFrameView)
+            view.bringSubviewToFront(qrCodeFrameView)
+        }
     }
 }
