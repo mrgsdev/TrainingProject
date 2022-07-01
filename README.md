@@ -36,3 +36,8 @@
 ![x](https://user-images.githubusercontent.com/107209053/176666653-8156224c-ae9b-490b-86d0-797e378db957.png)
 ```
 ```
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Scan%20QR%20Code%20Using%20AVFoundation)
+![qr](https://user-images.githubusercontent.com/107209053/176849552-a8e5f476-15d4-4d87-9b03-8aa3fe23ef00.png)
+```
+
+
