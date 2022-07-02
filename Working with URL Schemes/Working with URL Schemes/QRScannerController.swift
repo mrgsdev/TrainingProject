@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class QRScannerController: UIViewController {
-
+    
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
     
@@ -33,13 +33,13 @@ class QRScannerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Get the back-facing camera for capturing videos
         guard let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
             print("Failed to get the camera device")
             return
         }
-
+        
         do {
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.
             let input = try AVCaptureDeviceInput(device: captureDevice)
@@ -54,7 +54,7 @@ class QRScannerController: UIViewController {
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
-//            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
+            //            captureMetadataOutput.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
             // Initialize the video preview layer and add it as a sublayer to the viewPreview view's layer.
             videoPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
@@ -67,7 +67,7 @@ class QRScannerController: UIViewController {
             
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
-
+            
             if let qrCodeFrameView = qrCodeFrameView {
                 qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
                 qrCodeFrameView.layer.borderWidth = 2
@@ -85,14 +85,14 @@ class QRScannerController: UIViewController {
         view.bringSubviewToFront(messageLabel)
         view.bringSubviewToFront(topbar)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-
+    
+    
 }
 
 extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
@@ -114,7 +114,28 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                launchApp(decodedURL: metadataObj.stringValue!)
             }
         }
+        
+    }
+    func launchApp(decodedURL: String) {
+        if presentedViewController != nil {
+            return
+        }
+        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
+        let confirmAction = UIAlertAction(title: "Confirm", style: .default, handler:{ (action) -> Void in
+            if let url = URL(string: decodedURL) {
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertPrompt.addAction(confirmAction)
+        alertPrompt.addAction(cancelAction)
+        
+        present(alertPrompt, animated: true, completion: nil)
     }
 }
