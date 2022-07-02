@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		42F5206328707FB500FB57D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5206228707FB500FB57D4 /* AppDelegate.swift */; };
 		42F5206528707FB500FB57D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5206428707FB500FB57D4 /* SceneDelegate.swift */; };
-		42F5206728707FB500FB57D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F5206628707FB500FB57D4 /* ViewController.swift */; };
 		42F5206A28707FB500FB57D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F5206828707FB500FB57D4 /* Main.storyboard */; };
 		42F5206C28707FB600FB57D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F5206B28707FB600FB57D4 /* Assets.xcassets */; };
 		42F5206F28707FB600FB57D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F5206D28707FB600FB57D4 /* LaunchScreen.storyboard */; };
+		42F52077287080EE00FB57D4 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F52076287080EE00FB57D4 /* QRCodeViewController.swift */; };
+		42F520792870810200FB57D4 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F520782870810200FB57D4 /* QRScannerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42F5205F28707FB500FB57D4 /* Working with URL Schemes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Working with URL Schemes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F5206228707FB500FB57D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42F5206428707FB500FB57D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42F5206628707FB500FB57D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42F5206928707FB500FB57D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42F5206B28707FB600FB57D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F5206E28707FB600FB57D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42F5207028707FB600FB57D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F52076287080EE00FB57D4 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		42F520782870810200FB57D4 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				42F5206228707FB500FB57D4 /* AppDelegate.swift */,
 				42F5206428707FB500FB57D4 /* SceneDelegate.swift */,
-				42F5206628707FB500FB57D4 /* ViewController.swift */,
 				42F5206828707FB500FB57D4 /* Main.storyboard */,
+				42F52076287080EE00FB57D4 /* QRCodeViewController.swift */,
+				42F520782870810200FB57D4 /* QRScannerController.swift */,
 				42F5206B28707FB600FB57D4 /* Assets.xcassets */,
 				42F5206D28707FB600FB57D4 /* LaunchScreen.storyboard */,
 				42F5207028707FB600FB57D4 /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42F5206728707FB500FB57D4 /* ViewController.swift in Sources */,
+				42F52077287080EE00FB57D4 /* QRCodeViewController.swift in Sources */,
+				42F520792870810200FB57D4 /* QRScannerController.swift in Sources */,
 				42F5206328707FB500FB57D4 /* AppDelegate.swift in Sources */,
 				42F5206528707FB500FB57D4 /* SceneDelegate.swift in Sources */,
 			);
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
