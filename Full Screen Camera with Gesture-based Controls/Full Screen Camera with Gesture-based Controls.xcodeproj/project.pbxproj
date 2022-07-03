@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		42A3D644287189C200C4500E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3D643287189C200C4500E /* AppDelegate.swift */; };
 		42A3D646287189C200C4500E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3D645287189C200C4500E /* SceneDelegate.swift */; };
-		42A3D648287189C200C4500E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3D647287189C200C4500E /* ViewController.swift */; };
 		42A3D64B287189C200C4500E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A3D649287189C200C4500E /* Main.storyboard */; };
 		42A3D64D287189C200C4500E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42A3D64C287189C200C4500E /* Assets.xcassets */; };
 		42A3D650287189C200C4500E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42A3D64E287189C200C4500E /* LaunchScreen.storyboard */; };
+		42A3D65828718AA100C4500E /* SimpleCameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3D65728718AA100C4500E /* SimpleCameraController.swift */; };
+		42A3D65A28718AAE00C4500E /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A3D65928718AAE00C4500E /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42A3D640287189C200C4500E /* Full Screen Camera with Gesture-based Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Full Screen Camera with Gesture-based Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A3D643287189C200C4500E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42A3D645287189C200C4500E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42A3D647287189C200C4500E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42A3D64A287189C200C4500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42A3D64C287189C200C4500E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42A3D64F287189C200C4500E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42A3D651287189C200C4500E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A3D65728718AA100C4500E /* SimpleCameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCameraController.swift; sourceTree = "<group>"; };
+		42A3D65928718AAE00C4500E /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				42A3D643287189C200C4500E /* AppDelegate.swift */,
 				42A3D645287189C200C4500E /* SceneDelegate.swift */,
-				42A3D647287189C200C4500E /* ViewController.swift */,
 				42A3D649287189C200C4500E /* Main.storyboard */,
+				42A3D65728718AA100C4500E /* SimpleCameraController.swift */,
+				42A3D65928718AAE00C4500E /* PhotoViewController.swift */,
 				42A3D64C287189C200C4500E /* Assets.xcassets */,
 				42A3D64E287189C200C4500E /* LaunchScreen.storyboard */,
 				42A3D651287189C200C4500E /* Info.plist */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42A3D648287189C200C4500E /* ViewController.swift in Sources */,
 				42A3D644287189C200C4500E /* AppDelegate.swift in Sources */,
+				42A3D65A28718AAE00C4500E /* PhotoViewController.swift in Sources */,
+				42A3D65828718AA100C4500E /* SimpleCameraController.swift in Sources */,
 				42A3D646287189C200C4500E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
