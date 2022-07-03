@@ -18,11 +18,12 @@ class SimpleCameraController: UIViewController {
     var currentDevice: AVCaptureDevice!
     var stillImageOutput: AVCapturePhotoOutput!
     var stillImage: UIImage?
+    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        configure()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,10 +48,28 @@ class SimpleCameraController: UIViewController {
         }
         // Configure the session with the output for capturing still images
         stillImageOutput = AVCapturePhotoOutput()
+        // Configure the session with the input and the output devices
+        captureSession.addInput(captureDeviceInput)
+        captureSession.addOutput(stillImageOutput)
+        // Provide a camera preview
+        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        view.layer.addSublayer(cameraPreviewLayer!)
+        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        cameraPreviewLayer?.frame = view.layer.frame
+        // Bring the camera button to front
+        view.bringSubviewToFront(cameraButton)
+        captureSession.startRunning()
     }
     // MARK: - Action methods
     
     @IBAction func capture(sender: UIButton) {
+        // Set photo settings
+        let photoSettings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
+        photoSettings.isAutoStillImageStabilizationEnabled = true
+        photoSettings.isHighResolutionPhotoEnabled = true
+        photoSettings.flashMode = .auto
+        stillImageOutput.isHighResolutionCaptureEnabled = true
+        stillImageOutput.capturePhoto(with: photoSettings, delegate: self)
     }
     
     // MARK: - Segues
@@ -58,4 +77,23 @@ class SimpleCameraController: UIViewController {
     @IBAction func unwindToCameraView(segue: UIStoryboardSegue) {
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController. // Pass the selected object to the new view controller.
+        if segue.identifier == "showPhoto" {
+            let photoViewController = segue.destination as! PhotoViewController
+            photoViewController.image = stillImage
+        }
+    }
+}
+extension SimpleCameraController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        
+        guard error == nil else { return }
+        // Get the image from the photo buffer
+        guard let imageData = photo.fileDataRepresentation() else { return }
+        
+        stillImage = UIImage(data: imageData)
+        
+        performSegue(withIdentifier: "showPhoto", sender: self) }
 }
