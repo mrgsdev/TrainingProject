@@ -44,7 +44,8 @@
 ![url](https://user-images.githubusercontent.com/107209053/177004413-3b8114c2-1185-4f13-8134-7d9f1d548ecb.png)
 ```
 ```
-# [Open Project👇] 
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Full%20Screen%20Camera%20with%20Gesture-based%20Controls)
+![photo](https://user-images.githubusercontent.com/107209053/177033142-7e97507f-4481-4196-943d-a613e585e664.png)
 
 ```
 ```
