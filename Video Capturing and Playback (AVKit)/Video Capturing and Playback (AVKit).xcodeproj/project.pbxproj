@@ -13,6 +13,7 @@
 		426B09A62872D08C00B20125 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426B09A42872D08C00B20125 /* Main.storyboard */; };
 		426B09A82872D08C00B20125 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 426B09A72872D08C00B20125 /* Assets.xcassets */; };
 		426B09AB2872D08C00B20125 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 426B09A92872D08C00B20125 /* LaunchScreen.storyboard */; };
+		426B09B32872D0FB00B20125 /* SimpleVideoCamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B09B22872D0FB00B20125 /* SimpleVideoCamController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		426B09A72872D08C00B20125 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		426B09AA2872D08C00B20125 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		426B09AC2872D08C00B20125 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426B09B22872D0FB00B20125 /* SimpleVideoCamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleVideoCamController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				426B09A22872D08C00B20125 /* ViewController.swift */,
 				426B09A42872D08C00B20125 /* Main.storyboard */,
 				426B09A72872D08C00B20125 /* Assets.xcassets */,
+				426B09B22872D0FB00B20125 /* SimpleVideoCamController.swift */,
 				426B09A92872D08C00B20125 /* LaunchScreen.storyboard */,
 				426B09AC2872D08C00B20125 /* Info.plist */,
 			);
@@ -141,6 +144,7 @@
 				426B09A32872D08C00B20125 /* ViewController.swift in Sources */,
 				426B099F2872D08C00B20125 /* AppDelegate.swift in Sources */,
 				426B09A12872D08C00B20125 /* SceneDelegate.swift in Sources */,
+				426B09B32872D0FB00B20125 /* SimpleVideoCamController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
