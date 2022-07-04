@@ -49,8 +49,9 @@
 
 ```
 ```
-# [Open Project👇] 
-
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Video%20Capturing%20and%20Playback%20(AVKit))
+![w](https://user-images.githubusercontent.com/107209053/177114460-6254ce2c-d3fa-4368-b224-f80e6477d569.png)
+ 
 ```
 ```
 # [Open Project👇] 
