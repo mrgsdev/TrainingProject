@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import AVKit
 class SimpleVideoCamController: UIViewController {
     
     @IBOutlet var cameraButton:UIButton!
@@ -56,6 +57,15 @@ class SimpleVideoCamController: UIViewController {
         view.bringSubviewToFront(cameraButton)
         captureSession.startRunning()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "playVideo" {
+            let videoPlayerViewController = segue.destination as! AVPlayerViewController
+            let videoFileURL = sender as! URL
+            videoPlayerViewController.player = AVPlayer(url: videoFileURL)
+        }
+         
+    }
     // MARK: - Action methods
     
     @IBAction func unwindToCamera(segue:UIStoryboardSegue) {
@@ -87,5 +97,7 @@ extension SimpleVideoCamController:AVCaptureFileOutputRecordingDelegate {
                     print(error ?? "")
         return
         }
+        performSegue(withIdentifier: "playVideo", sender: outputFileURL)
     }
 }
+ 
