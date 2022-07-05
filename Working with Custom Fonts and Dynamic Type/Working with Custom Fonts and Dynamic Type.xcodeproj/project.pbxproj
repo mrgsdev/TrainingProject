@@ -13,6 +13,21 @@
 		42FEE5DD28740EDA00A637EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5DB28740EDA00A637EA /* Main.storyboard */; };
 		42FEE5DF28740EDB00A637EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5DE28740EDB00A637EA /* Assets.xcassets */; };
 		42FEE5E228740EDB00A637EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5E028740EDB00A637EA /* LaunchScreen.storyboard */; };
+		42FEE5F02874103700A637EA /* Mohave-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5EA2874103700A637EA /* Mohave-BoldItalic.otf */; };
+		42FEE5F12874103700A637EA /* Mohave-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5EB2874103700A637EA /* Mohave-Italic.otf */; };
+		42FEE5F22874103700A637EA /* Mohave-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5EC2874103700A637EA /* Mohave-MediumItalic.otf */; };
+		42FEE5F32874103700A637EA /* Mohave-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5ED2874103700A637EA /* Mohave-Regular.otf */; };
+		42FEE5F42874103700A637EA /* Mohave-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5EE2874103700A637EA /* Mohave-Bold.otf */; };
+		42FEE5F52874103700A637EA /* Mohave-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5EF2874103700A637EA /* Mohave-Light.otf */; };
+		42FEE5F92874104100A637EA /* Hallo sans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5F62874104100A637EA /* Hallo sans.otf */; };
+		42FEE5FA2874104100A637EA /* Hallo sans black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5F72874104100A637EA /* Hallo sans black.otf */; };
+		42FEE5FB2874104100A637EA /* Hallo sans light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5F82874104100A637EA /* Hallo sans light.otf */; };
+		42FEE6022874104F00A637EA /* Canter-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5FC2874104F00A637EA /* Canter-Light.otf */; };
+		42FEE6032874104F00A637EA /* Canter-BoldStrips.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5FD2874104F00A637EA /* Canter-BoldStrips.otf */; };
+		42FEE6042874104F00A637EA /* Canter-Outline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5FE2874104F00A637EA /* Canter-Outline.otf */; };
+		42FEE6052874104F00A637EA /* Canter-Bold3D.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE5FF2874104F00A637EA /* Canter-Bold3D.otf */; };
+		42FEE6062874104F00A637EA /* Canter-BoldShadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE6002874104F00A637EA /* Canter-BoldShadow.otf */; };
+		42FEE6072874104F00A637EA /* Canter-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42FEE6012874104F00A637EA /* Canter-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		42FEE5DE28740EDB00A637EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42FEE5E128740EDB00A637EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42FEE5E328740EDB00A637EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42FEE5EA2874103700A637EA /* Mohave-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-BoldItalic.otf"; sourceTree = "<group>"; };
+		42FEE5EB2874103700A637EA /* Mohave-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Italic.otf"; sourceTree = "<group>"; };
+		42FEE5EC2874103700A637EA /* Mohave-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-MediumItalic.otf"; sourceTree = "<group>"; };
+		42FEE5ED2874103700A637EA /* Mohave-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Regular.otf"; sourceTree = "<group>"; };
+		42FEE5EE2874103700A637EA /* Mohave-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Bold.otf"; sourceTree = "<group>"; };
+		42FEE5EF2874103700A637EA /* Mohave-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mohave-Light.otf"; sourceTree = "<group>"; };
+		42FEE5F62874104100A637EA /* Hallo sans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans.otf"; sourceTree = "<group>"; };
+		42FEE5F72874104100A637EA /* Hallo sans black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans black.otf"; sourceTree = "<group>"; };
+		42FEE5F82874104100A637EA /* Hallo sans light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hallo sans light.otf"; sourceTree = "<group>"; };
+		42FEE5FC2874104F00A637EA /* Canter-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Light.otf"; sourceTree = "<group>"; };
+		42FEE5FD2874104F00A637EA /* Canter-BoldStrips.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldStrips.otf"; sourceTree = "<group>"; };
+		42FEE5FE2874104F00A637EA /* Canter-Outline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Outline.otf"; sourceTree = "<group>"; };
+		42FEE5FF2874104F00A637EA /* Canter-Bold3D.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold3D.otf"; sourceTree = "<group>"; };
+		42FEE6002874104F00A637EA /* Canter-BoldShadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-BoldShadow.otf"; sourceTree = "<group>"; };
+		42FEE6012874104F00A637EA /* Canter-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Canter-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +86,7 @@
 		42FEE5D428740EDA00A637EA /* Working with Custom Fonts and Dynamic Type */ = {
 			isa = PBXGroup;
 			children = (
+				42FEE5E92874101C00A637EA /* Fonts */,
 				42FEE5D528740EDA00A637EA /* AppDelegate.swift */,
 				42FEE5D728740EDA00A637EA /* SceneDelegate.swift */,
 				42FEE5D928740EDA00A637EA /* ViewController.swift */,
@@ -65,6 +96,28 @@
 				42FEE5E328740EDB00A637EA /* Info.plist */,
 			);
 			path = "Working with Custom Fonts and Dynamic Type";
+			sourceTree = "<group>";
+		};
+		42FEE5E92874101C00A637EA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				42FEE6012874104F00A637EA /* Canter-Bold.otf */,
+				42FEE5FF2874104F00A637EA /* Canter-Bold3D.otf */,
+				42FEE6002874104F00A637EA /* Canter-BoldShadow.otf */,
+				42FEE5FD2874104F00A637EA /* Canter-BoldStrips.otf */,
+				42FEE5FC2874104F00A637EA /* Canter-Light.otf */,
+				42FEE5FE2874104F00A637EA /* Canter-Outline.otf */,
+				42FEE5F72874104100A637EA /* Hallo sans black.otf */,
+				42FEE5F82874104100A637EA /* Hallo sans light.otf */,
+				42FEE5F62874104100A637EA /* Hallo sans.otf */,
+				42FEE5EE2874103700A637EA /* Mohave-Bold.otf */,
+				42FEE5EA2874103700A637EA /* Mohave-BoldItalic.otf */,
+				42FEE5EB2874103700A637EA /* Mohave-Italic.otf */,
+				42FEE5EF2874103700A637EA /* Mohave-Light.otf */,
+				42FEE5EC2874103700A637EA /* Mohave-MediumItalic.otf */,
+				42FEE5ED2874103700A637EA /* Mohave-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +178,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42FEE6022874104F00A637EA /* Canter-Light.otf in Resources */,
+				42FEE5F22874103700A637EA /* Mohave-MediumItalic.otf in Resources */,
+				42FEE5F12874103700A637EA /* Mohave-Italic.otf in Resources */,
+				42FEE6072874104F00A637EA /* Canter-Bold.otf in Resources */,
+				42FEE5F32874103700A637EA /* Mohave-Regular.otf in Resources */,
+				42FEE5F02874103700A637EA /* Mohave-BoldItalic.otf in Resources */,
+				42FEE5FB2874104100A637EA /* Hallo sans light.otf in Resources */,
+				42FEE6032874104F00A637EA /* Canter-BoldStrips.otf in Resources */,
+				42FEE5F92874104100A637EA /* Hallo sans.otf in Resources */,
+				42FEE5F42874103700A637EA /* Mohave-Bold.otf in Resources */,
 				42FEE5E228740EDB00A637EA /* LaunchScreen.storyboard in Resources */,
+				42FEE6052874104F00A637EA /* Canter-Bold3D.otf in Resources */,
 				42FEE5DF28740EDB00A637EA /* Assets.xcassets in Resources */,
+				42FEE5F52874103700A637EA /* Mohave-Light.otf in Resources */,
 				42FEE5DD28740EDA00A637EA /* Main.storyboard in Resources */,
+				42FEE6062874104F00A637EA /* Canter-BoldShadow.otf in Resources */,
+				42FEE5FA2874104100A637EA /* Hallo sans black.otf in Resources */,
+				42FEE6042874104F00A637EA /* Canter-Outline.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

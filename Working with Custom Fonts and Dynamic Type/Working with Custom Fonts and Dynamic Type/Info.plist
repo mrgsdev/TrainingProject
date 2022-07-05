@@ -2,6 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Canter-Bold.otf</string>
+		<string>Canter-Bold3D.otf</string>
+		<string>Canter-BoldShadow.otf</string>
+		<string>Canter-BoldStrips.otf</string>
+		<string>Canter-Light.otf</string>
+		<string>Canter-Outline.otf</string>
+		<string>Hallo sans black.otf</string>
+		<string>Hallo sans light.otf</string>
+		<string>Hallo sans.otf</string>
+		<string>Mohave-Bold.otf</string>
+		<string>Mohave-BoldItalic.otf</string>
+		<string>Mohave-Italic.otf</string>
+		<string>Mohave-Light.otf</string>
+		<string>Mohave-MediumItalic.otf</string>
+		<string>Mohave-Regular.otf</string>
+	</array>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
