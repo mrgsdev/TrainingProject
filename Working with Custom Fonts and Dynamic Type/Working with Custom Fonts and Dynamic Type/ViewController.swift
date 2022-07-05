@@ -14,6 +14,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+///       Using Custom Fonts in Code
+//        label1.font = UIFont(name: "Mohave-Italic", size: 25.0)
+//        label2.font = UIFont(name: "Hallo sans", size: 30.0)
+//        label3.font = UIFont(name: "Canter Light", size: 35.0)
+///     Dynamic Type
+        label1.font = UIFont.preferredFont(forTextStyle: .title1)
+        label2.font = UIFont.preferredFont(forTextStyle: .headline)
+        label3.font = UIFont.preferredFont(forTextStyle: .subheadline)
+        
+        label1.adjustsFontForContentSizeCategory = true
+        label2.adjustsFontForContentSizeCategory = true
+        label3.adjustsFontForContentSizeCategory = true
     }
 
     override func didReceiveMemoryWarning() {
