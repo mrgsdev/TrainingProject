@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1s7-DF-UoT"/>
                     <connections>
+                        <outlet property="actionButtonItem" destination="abn-Rg-ngI" id="QRr-rG-P7Z"/>
                         <outlet property="webView" destination="Oi0-iW-ON6" id="Amw-PW-ABn"/>
                     </connections>
                 </viewController>

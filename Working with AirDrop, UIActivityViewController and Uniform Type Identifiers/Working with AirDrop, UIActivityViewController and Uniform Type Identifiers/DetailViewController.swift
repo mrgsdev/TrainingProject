@@ -10,7 +10,7 @@ import WebKit
 class DetailViewController: UIViewController {
     
     @IBOutlet var webView: WKWebView!
-    
+    @IBOutlet var actionButtonItem: UIBarButtonItem!
     var filename = ""
     
     override func viewDidLoad() {
@@ -58,6 +58,9 @@ class DetailViewController: UIViewController {
                 activityTypeType.postToTencentWeibo
             ]
             activityController.excludedActivityTypes = excludedActivities
-            present(activityController, animated: true, completion: nil) }
+            present(activityController, animated: true, completion: nil)
+            if let popOverController = activityController.popoverPresentationController { popOverController.barButtonItem = actionButtonItem
+            }
+        }
     }
 }
