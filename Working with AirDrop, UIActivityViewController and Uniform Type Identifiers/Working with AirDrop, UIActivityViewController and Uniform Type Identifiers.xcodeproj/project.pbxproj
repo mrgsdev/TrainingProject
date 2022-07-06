@@ -13,6 +13,14 @@
 		4224ABA52875697D001D101E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABA32875697D001D101E /* Main.storyboard */; };
 		4224ABA72875697E001D101E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABA62875697E001D101E /* Assets.xcassets */; };
 		4224ABAA2875697E001D101E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABA82875697E001D101E /* LaunchScreen.storyboard */; };
+		4224ABB2287569C6001D101E /* AirDropTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4224ABB1287569C6001D101E /* AirDropTableViewController.swift */; };
+		4224ABB4287569E7001D101E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4224ABB3287569E7001D101E /* DetailViewController.swift */; };
+		4224ABCF28756A27001D101E /* Why Appcoda.doc in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABC928756A27001D101E /* Why Appcoda.doc */; };
+		4224ABD028756A27001D101E /* glico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABCA28756A27001D101E /* glico.jpg */; };
+		4224ABD128756A27001D101E /* foggy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABCB28756A27001D101E /* foggy.jpg */; };
+		4224ABD228756A27001D101E /* 10 Great iPhone Tips.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABCC28756A27001D101E /* 10 Great iPhone Tips.pdf */; };
+		4224ABD328756A27001D101E /* Hello World.ppt in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABCD28756A27001D101E /* Hello World.ppt */; };
+		4224ABD428756A27001D101E /* camera-photo-tips.html in Resources */ = {isa = PBXBuildFile; fileRef = 4224ABCE28756A27001D101E /* camera-photo-tips.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		4224ABA62875697E001D101E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4224ABA92875697E001D101E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4224ABAB2875697E001D101E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4224ABB1287569C6001D101E /* AirDropTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropTableViewController.swift; sourceTree = "<group>"; };
+		4224ABB3287569E7001D101E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4224ABC928756A27001D101E /* Why Appcoda.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Why Appcoda.doc"; sourceTree = "<group>"; };
+		4224ABCA28756A27001D101E /* glico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = glico.jpg; sourceTree = "<group>"; };
+		4224ABCB28756A27001D101E /* foggy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foggy.jpg; sourceTree = "<group>"; };
+		4224ABCC28756A27001D101E /* 10 Great iPhone Tips.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "10 Great iPhone Tips.pdf"; sourceTree = "<group>"; };
+		4224ABCD28756A27001D101E /* Hello World.ppt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hello World.ppt"; sourceTree = "<group>"; };
+		4224ABCE28756A27001D101E /* camera-photo-tips.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "camera-photo-tips.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,31 @@
 		4224AB9C2875697D001D101E /* Working with AirDrop, UIActivityViewController and Uniform Type Identifiers */ = {
 			isa = PBXGroup;
 			children = (
+				4224ABC828756A14001D101E /* resources */,
 				4224AB9D2875697D001D101E /* AppDelegate.swift */,
 				4224AB9F2875697D001D101E /* SceneDelegate.swift */,
 				4224ABA12875697D001D101E /* ViewController.swift */,
 				4224ABA32875697D001D101E /* Main.storyboard */,
+				4224ABB1287569C6001D101E /* AirDropTableViewController.swift */,
+				4224ABB3287569E7001D101E /* DetailViewController.swift */,
 				4224ABA62875697E001D101E /* Assets.xcassets */,
 				4224ABA82875697E001D101E /* LaunchScreen.storyboard */,
 				4224ABAB2875697E001D101E /* Info.plist */,
 			);
 			path = "Working with AirDrop, UIActivityViewController and Uniform Type Identifiers";
+			sourceTree = "<group>";
+		};
+		4224ABC828756A14001D101E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				4224ABCC28756A27001D101E /* 10 Great iPhone Tips.pdf */,
+				4224ABCE28756A27001D101E /* camera-photo-tips.html */,
+				4224ABCB28756A27001D101E /* foggy.jpg */,
+				4224ABCA28756A27001D101E /* glico.jpg */,
+				4224ABCD28756A27001D101E /* Hello World.ppt */,
+				4224ABC928756A27001D101E /* Why Appcoda.doc */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +157,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4224ABD428756A27001D101E /* camera-photo-tips.html in Resources */,
+				4224ABD128756A27001D101E /* foggy.jpg in Resources */,
+				4224ABD028756A27001D101E /* glico.jpg in Resources */,
+				4224ABD228756A27001D101E /* 10 Great iPhone Tips.pdf in Resources */,
 				4224ABAA2875697E001D101E /* LaunchScreen.storyboard in Resources */,
 				4224ABA72875697E001D101E /* Assets.xcassets in Resources */,
+				4224ABD328756A27001D101E /* Hello World.ppt in Resources */,
 				4224ABA52875697D001D101E /* Main.storyboard in Resources */,
+				4224ABCF28756A27001D101E /* Why Appcoda.doc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +178,8 @@
 			files = (
 				4224ABA22875697D001D101E /* ViewController.swift in Sources */,
 				4224AB9E2875697D001D101E /* AppDelegate.swift in Sources */,
+				4224ABB4287569E7001D101E /* DetailViewController.swift in Sources */,
+				4224ABB2287569C6001D101E /* AirDropTableViewController.swift in Sources */,
 				4224ABA02875697D001D101E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
