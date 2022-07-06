@@ -63,8 +63,8 @@
 
 ```
 ```
-# [Open Project👇] 
-
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/AutoLayoutApp)
+![lk](https://user-images.githubusercontent.com/107209053/177510681-bb7acf01-2161-41ed-89c7-c3fcdf9ff098.png)
 ```
 ```
 # [Open Project👇] 
