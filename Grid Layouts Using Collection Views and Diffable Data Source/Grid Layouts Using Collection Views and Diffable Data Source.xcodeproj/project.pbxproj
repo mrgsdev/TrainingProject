@@ -15,6 +15,7 @@
 		424AF7CC2876DF2E00E108E1 /* IconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AF7CB2876DF2E00E108E1 /* IconCollectionViewCell.swift */; };
 		424AF7CE2876DF5300E108E1 /* IconCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AF7CD2876DF5300E108E1 /* IconCollectionViewController.swift */; };
 		424AF7D02876E23300E108E1 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AF7CF2876E23300E108E1 /* Icon.swift */; };
+		424AF7D22876EA7600E108E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424AF7D12876EA7600E108E1 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		424AF7CB2876DF2E00E108E1 /* IconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewCell.swift; sourceTree = "<group>"; };
 		424AF7CD2876DF5300E108E1 /* IconCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconCollectionViewController.swift; sourceTree = "<group>"; };
 		424AF7CF2876E23300E108E1 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		424AF7D12876EA7600E108E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				424AF7B72876DBD600E108E1 /* AppDelegate.swift */,
 				424AF7B92876DBD600E108E1 /* SceneDelegate.swift */,
 				424AF7BD2876DBD600E108E1 /* Main.storyboard */,
+				424AF7D12876EA7600E108E1 /* DetailViewController.swift */,
 				424AF7CD2876DF5300E108E1 /* IconCollectionViewController.swift */,
 				424AF7CB2876DF2E00E108E1 /* IconCollectionViewCell.swift */,
 				424AF7C02876DBD700E108E1 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				424AF7B82876DBD600E108E1 /* AppDelegate.swift in Sources */,
 				424AF7CE2876DF5300E108E1 /* IconCollectionViewController.swift in Sources */,
 				424AF7BA2876DBD600E108E1 /* SceneDelegate.swift in Sources */,
+				424AF7D22876EA7600E108E1 /* DetailViewController.swift in Sources */,
 				424AF7D02876E23300E108E1 /* Icon.swift in Sources */,
 				424AF7CC2876DF2E00E108E1 /* IconCollectionViewCell.swift in Sources */,
 			);
