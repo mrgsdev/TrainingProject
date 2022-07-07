@@ -67,8 +67,8 @@
 ![lk](https://user-images.githubusercontent.com/107209053/177510681-bb7acf01-2161-41ed-89c7-c3fcdf9ff098.png)
 ```
 ```
-# [Open Project👇] 
-
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Grid%20Layouts%20Using%20Collection%20Views%20and%20Diffable%20Data%20Source)
+![w](https://user-images.githubusercontent.com/107209053/177765034-db8f3ddb-df71-4770-ae21-ef397a7134f7.png)
 ```
 ```
 
