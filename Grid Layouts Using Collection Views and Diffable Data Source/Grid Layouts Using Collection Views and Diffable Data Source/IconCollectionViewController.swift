@@ -5,16 +5,10 @@
 //  Created by MRGS on 07.07.2022.
 //
 //
-
-
 import UIKit
-
 private let reuseIdentifier = "Cell"
-
 class IconCollectionViewController: UICollectionViewController {
-    
     @IBOutlet var shareButton: UIBarButtonItem!
-    
     private var iconSet: [Icon] = [
         Icon(name: "Candle icon", imageName: "candle", description: "Halloween icons designed by Tania Raskalova.", price: 3.99, isFeatured: false),
         Icon(name: "Cat icon", imageName: "cat", description: "Halloween icon designed by Tania Raskalova.", price: 2.99, isFeatured: true),
