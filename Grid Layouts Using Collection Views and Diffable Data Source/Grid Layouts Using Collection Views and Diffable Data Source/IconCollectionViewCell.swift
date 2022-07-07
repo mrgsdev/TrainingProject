@@ -8,5 +8,6 @@
 import UIKit
 
 class IconCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var iconPriceLabel: UILabel!
 }
