@@ -61,10 +61,13 @@ class IconCollectionViewController: UICollectionViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
         
     }
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = dataSource
         updateSnapshot()
+       
     }
     
     /*
@@ -83,3 +86,12 @@ class IconCollectionViewController: UICollectionViewController {
     
     
 }
+//extension IconCollectionViewController{
+//    func estimateSize()  {
+//        if let layout = collectionViewLayout as? UICollectionViewFlowLayout { layout.itemSize = CGSize(width: 100, height: 150)
+//            layout.estimatedItemSize = .zero
+//            layout.scrollDirection = .horizontal
+//            layout.minimumInteritemSpacing = 20
+//        }
+//    }
+//}
