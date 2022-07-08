@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XNf-g3-Jq5">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -101,13 +102,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NRJ-BK-Vst">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="secondcell" id="PPC-kX-Dis" customClass="SecondDoodleControllerViewCell" customModule="Collection_Views_Using_UITraitCollection_and_Compositional_Layout" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DxU-BP-jaM">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -129,12 +130,32 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="bBv-AR-AlC" customClass="SectionHeaderView" customModule="Collection_Views_Using_UITraitCollection_and_Compositional_Layout" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pK0-iA-897">
+                                            <rect key="frame" x="8" y="16.666666666666668" width="37" height="17.000000000000004"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pK0-iA-897" firstAttribute="leading" secondItem="bBv-AR-AlC" secondAttribute="leadingMargin" id="Acw-XD-eHT"/>
+                                        <constraint firstItem="pK0-iA-897" firstAttribute="centerY" secondItem="bBv-AR-AlC" secondAttribute="centerY" id="llT-3a-CEz"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="pK0-iA-897" id="DAw-e5-TpW"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pPt-rS-6yT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bgM-iD-jld" firstAttribute="top" secondItem="RSM-Kv-fIT" secondAttribute="top" id="0Zf-Q1-fD4"/>
+                            <constraint firstItem="bgM-iD-jld" firstAttribute="leading" secondItem="pPt-rS-6yT" secondAttribute="leading" id="Ayb-TJ-f1M"/>
                             <constraint firstItem="bgM-iD-jld" firstAttribute="trailing" secondItem="RSM-Kv-fIT" secondAttribute="trailing" id="Flq-cQ-2bF"/>
                             <constraint firstItem="bgM-iD-jld" firstAttribute="leading" secondItem="RSM-Kv-fIT" secondAttribute="leading" id="JC7-cV-sMm"/>
                             <constraint firstAttribute="bottom" secondItem="bgM-iD-jld" secondAttribute="bottom" id="SGd-ds-eNB"/>

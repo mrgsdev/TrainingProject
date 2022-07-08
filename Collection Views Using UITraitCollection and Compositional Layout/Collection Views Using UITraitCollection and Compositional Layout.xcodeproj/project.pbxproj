@@ -16,6 +16,7 @@
 		425638F32878220C004FF034 /* DoodleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */; };
 		425638F52878282A004FF034 /* SecondDoodleControllerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638F42878282A004FF034 /* SecondDoodleControllerViewCell.swift */; };
 		425638F728782867004FF034 /* SecondDoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638F628782867004FF034 /* SecondDoodleViewController.swift */; };
+		425638FC287831E4004FF034 /* SectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638FB287831E4004FF034 /* SectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCollectionViewCell.swift; sourceTree = "<group>"; };
 		425638F42878282A004FF034 /* SecondDoodleControllerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDoodleControllerViewCell.swift; sourceTree = "<group>"; };
 		425638F628782867004FF034 /* SecondDoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDoodleViewController.swift; sourceTree = "<group>"; };
+		425638FB287831E4004FF034 /* SectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,18 +64,43 @@
 		425638DB28781F42004FF034 /* Collection Views Using UITraitCollection and Compositional Layout */ = {
 			isa = PBXGroup;
 			children = (
-				425638DC28781F42004FF034 /* AppDelegate.swift */,
-				425638DE28781F42004FF034 /* SceneDelegate.swift */,
+				425638F828782A37004FF034 /* DoodleCollection */,
+				425638F928782A48004FF034 /* SecondDoodleCollection */,
 				425638E228781F42004FF034 /* Main.storyboard */,
-				425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */,
-				425638F028782025004FF034 /* DoodleViewController.swift */,
-				425638F628782867004FF034 /* SecondDoodleViewController.swift */,
-				425638F42878282A004FF034 /* SecondDoodleControllerViewCell.swift */,
 				425638E528781F43004FF034 /* Assets.xcassets */,
-				425638E728781F43004FF034 /* LaunchScreen.storyboard */,
 				425638EA28781F43004FF034 /* Info.plist */,
+				425638FA28782A6A004FF034 /* AppSceneLauch */,
 			);
 			path = "Collection Views Using UITraitCollection and Compositional Layout";
+			sourceTree = "<group>";
+		};
+		425638F828782A37004FF034 /* DoodleCollection */ = {
+			isa = PBXGroup;
+			children = (
+				425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */,
+				425638F028782025004FF034 /* DoodleViewController.swift */,
+			);
+			path = DoodleCollection;
+			sourceTree = "<group>";
+		};
+		425638F928782A48004FF034 /* SecondDoodleCollection */ = {
+			isa = PBXGroup;
+			children = (
+				425638F628782867004FF034 /* SecondDoodleViewController.swift */,
+				425638F42878282A004FF034 /* SecondDoodleControllerViewCell.swift */,
+				425638FB287831E4004FF034 /* SectionHeaderView.swift */,
+			);
+			path = SecondDoodleCollection;
+			sourceTree = "<group>";
+		};
+		425638FA28782A6A004FF034 /* AppSceneLauch */ = {
+			isa = PBXGroup;
+			children = (
+				425638DC28781F42004FF034 /* AppDelegate.swift */,
+				425638DE28781F42004FF034 /* SceneDelegate.swift */,
+				425638E728781F43004FF034 /* LaunchScreen.storyboard */,
+			);
+			path = AppSceneLauch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +178,7 @@
 				425638F52878282A004FF034 /* SecondDoodleControllerViewCell.swift in Sources */,
 				425638DF28781F42004FF034 /* SceneDelegate.swift in Sources */,
 				425638F128782025004FF034 /* DoodleViewController.swift in Sources */,
+				425638FC287831E4004FF034 /* SectionHeaderView.swift in Sources */,
 				425638F728782867004FF034 /* SecondDoodleViewController.swift in Sources */,
 				425638F32878220C004FF034 /* DoodleCollectionViewCell.swift in Sources */,
 			);
@@ -307,6 +335,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +364,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

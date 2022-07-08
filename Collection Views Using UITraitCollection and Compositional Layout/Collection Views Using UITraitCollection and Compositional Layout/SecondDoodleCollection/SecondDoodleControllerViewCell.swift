@@ -8,5 +8,10 @@
 import UIKit
 
 class SecondDoodleControllerViewCell: UICollectionViewCell {
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageView: UIImageView!{
+        didSet {
+               imageView.layer.cornerRadius = 20.0
+               imageView.clipsToBounds = true
+           }
+    }
 }
