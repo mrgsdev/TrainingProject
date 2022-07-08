@@ -13,6 +13,7 @@
 		425638E628781F43004FF034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425638E528781F43004FF034 /* Assets.xcassets */; };
 		425638E928781F43004FF034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425638E728781F43004FF034 /* LaunchScreen.storyboard */; };
 		425638F128782025004FF034 /* DoodleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638F028782025004FF034 /* DoodleViewController.swift */; };
+		425638F32878220C004FF034 /* DoodleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		425638E828781F43004FF034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425638EA28781F43004FF034 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		425638F028782025004FF034 /* DoodleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleViewController.swift; sourceTree = "<group>"; };
+		425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoodleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				425638DC28781F42004FF034 /* AppDelegate.swift */,
 				425638DE28781F42004FF034 /* SceneDelegate.swift */,
 				425638E228781F42004FF034 /* Main.storyboard */,
+				425638F22878220C004FF034 /* DoodleCollectionViewCell.swift */,
 				425638F028782025004FF034 /* DoodleViewController.swift */,
 				425638E528781F43004FF034 /* Assets.xcassets */,
 				425638E728781F43004FF034 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				425638DD28781F42004FF034 /* AppDelegate.swift in Sources */,
 				425638DF28781F42004FF034 /* SceneDelegate.swift in Sources */,
 				425638F128782025004FF034 /* DoodleViewController.swift in Sources */,
+				425638F32878220C004FF034 /* DoodleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
