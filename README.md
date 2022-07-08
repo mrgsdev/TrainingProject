@@ -71,4 +71,7 @@
 ![w](https://user-images.githubusercontent.com/107209053/177765034-db8f3ddb-df71-4770-ae21-ef397a7134f7.png)
 ```
 ```
-
+# [Open Project👇](https://github.com/mrgsdev/TrainingProject/tree/main/Collection%20Views%20Using%20UITraitCollection%20and%20Compositional%20Layout)
+![1](https://user-images.githubusercontent.com/107209053/177972399-e750501d-fe8f-47fa-8dfe-ea79a3e2dd61.png)
+```
+```
