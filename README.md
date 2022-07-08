@@ -23,11 +23,12 @@
 - [x] [AutoLayoutApp](#16)
 - [x] [Grid Layouts Using Collection Views and Diffable Data Source](#17)
 - [x] [Collection Views Using UITraitCollection and Compositional Layout](#18)
-
-# [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)<a name="1"></a>
+<a name="1"></a>
+# [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png)<a name="2"></a>
 ##
-# [Table View with Diffable Data Source](https://github.com/mrgsdev/TrainingProject/tree/main/Table%20View%20with%20Diffable%20Data%20Source)<a name="2"></a>
+<a name="2"></a>
+# [Table View with Diffable Data Source](https://github.com/mrgsdev/TrainingProject/tree/main/Table%20View%20with%20Diffable%20Data%20Source)
 ![tableview](https://user-images.githubusercontent.com/107209053/175321430-7710cf8b-d55e-4169-ab15-b8ffd11b74ff.png)
 ##
 # [Animating Table View Cells](https://github.com/mrgsdev/TrainingProject/tree/main/Animating%20Table%20View%20Cells)<a name="3"></a>
