@@ -44,7 +44,7 @@ class SecondDoodleViewController: UIViewController {
         super.viewDidLoad()
         configureHeader()
         collectionView.dataSource = dataSource
-        collectionView.collectionViewLayout =  createGridLayout()
+        collectionView.collectionViewLayout =  createMultiGridLayout()
         
         
         
@@ -70,26 +70,36 @@ class SecondDoodleViewController: UIViewController {
     }
     
     private func createMultiGridLayout() -> UICollectionViewLayout {
+        
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
+            
             var column = 1
+            
             if let dataSection = Section(rawValue: sectionIndex) {
                 column = dataSection.columnCount
             }
+            
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0/CGFloat(column)),heightDimension: .fractionalHeight(1.0))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
-            item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5 , trailing: 5)
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0 ),heightDimension: .absolute(80.0))
+            item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .absolute(sectionIndex == 0 ? 200 : 80.0))
+            
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+            group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
+            
             let section = NSCollectionLayoutSection(group: group)
-            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
-            let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: "header", alignment: .top)
-            section.boundarySupplementaryItems = [headerElement]
             if sectionIndex == 0 {
-                section.orthogonalScrollingBehavior = .continuous
+                section.orthogonalScrollingBehavior = .paging
             }
+            
+            let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+            let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+
+            section.boundarySupplementaryItems = [headerElement]
+            
             return section
         }
-        
         
         return layout
         
