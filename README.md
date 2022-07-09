@@ -26,16 +26,18 @@
 - [x] [View Controller Transitions and Animations](#19)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
-![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png)<a name="2"></a>
+![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png) 
 ##
 <a name="2"></a>
 # [Table View with Diffable Data Source](https://github.com/mrgsdev/TrainingProject/tree/main/Table%20View%20with%20Diffable%20Data%20Source)
 ![tableview](https://user-images.githubusercontent.com/107209053/175321430-7710cf8b-d55e-4169-ab15-b8ffd11b74ff.png)
 ##
-# [Animating Table View Cells](https://github.com/mrgsdev/TrainingProject/tree/main/Animating%20Table%20View%20Cells)<a name="3"></a>
+<a name="3"></a>
+# [Animating Table View Cells](https://github.com/mrgsdev/TrainingProject/tree/main/Animating%20Table%20View%20Cells)
 ![r](https://user-images.githubusercontent.com/107209053/175327328-b57fbf9e-2c5d-465f-90bd-d1de7b0b6176.png)
 ##
-# [Working with JSON and Codable](https://github.com/mrgsdev/TrainingProject/tree/main/Working%20with%20JSON%20and%20Codable)<a name="4"></a>
+<a name="4"></a>
+# [Working with JSON and Codable](https://github.com/mrgsdev/TrainingProject/tree/main/Working%20with%20JSON%20and%20Codable)
 ![Working with JSON and Codable](https://user-images.githubusercontent.com/107209053/175495077-fb51d9d4-9ddd-4440-959c-3f205d678741.png)
 ##
 # [Working with Email and Attachments](https://github.com/mrgsdev/TrainingProject/tree/main/Working%20with%20Email%20and%20Attachments)<a name="5"></a>
