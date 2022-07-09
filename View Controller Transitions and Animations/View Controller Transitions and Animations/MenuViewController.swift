@@ -23,6 +23,12 @@ class MenuViewController: UIViewController {
     
     lazy var dataSource = configureDataSource()
     
+    // View Transition Animator
+    let slideDownTransition = SlideDownTransitionAnimator()
+    let slideRightTransition = SlideRightTransitionAnimator()
+    let popTransition = PopTransitionAnimator()
+    let rotateTransition = RotateTransitionAnimator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +56,24 @@ class MenuViewController: UIViewController {
         
         return layout
         
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let toViewController = segue.destination
+        let sourceViewController = segue.source as! MenuViewController
+        
+        if let selectedIndexPaths = sourceViewController.collectionView.indexPathsForSelectedItems {
+            
+            switch selectedIndexPaths[0].row {
+            case 0: toViewController.transitioningDelegate = slideDownTransition
+            case 1: toViewController.transitioningDelegate = slideRightTransition
+            case 2: toViewController.transitioningDelegate = popTransition
+            case 3: toViewController.transitioningDelegate = rotateTransition
+            default: break
+            }
+        }
     }
 
 }

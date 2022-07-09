@@ -17,6 +17,10 @@
 		424D36642879ADF900F250F3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D36632879ADF900F250F3 /* DetailViewController.swift */; };
 		424D36662879AE6700F250F3 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D36652879AE6700F250F3 /* MenuCell.swift */; };
 		424D36682879AE9600F250F3 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D36672879AE9600F250F3 /* MenuItem.swift */; };
+		424D366A2879AF1200F250F3 /* SlideDownTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D36692879AF1200F250F3 /* SlideDownTransitionAnimator.swift */; };
+		424D366C2879B0F800F250F3 /* SlideRightTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D366B2879B0F800F250F3 /* SlideRightTransitionAnimator.swift */; };
+		424D366E2879B10D00F250F3 /* PopTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D366D2879B10D00F250F3 /* PopTransitionAnimator.swift */; };
+		424D36702879B11700F250F3 /* RotateTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 424D366F2879B11700F250F3 /* RotateTransitionAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		424D36632879ADF900F250F3 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		424D36652879AE6700F250F3 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		424D36672879AE9600F250F3 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		424D36692879AF1200F250F3 /* SlideDownTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideDownTransitionAnimator.swift; sourceTree = "<group>"; };
+		424D366B2879B0F800F250F3 /* SlideRightTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideRightTransitionAnimator.swift; sourceTree = "<group>"; };
+		424D366D2879B10D00F250F3 /* PopTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionAnimator.swift; sourceTree = "<group>"; };
+		424D366F2879B11700F250F3 /* RotateTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateTransitionAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,10 @@
 				424D36672879AE9600F250F3 /* MenuItem.swift */,
 				424D36632879ADF900F250F3 /* DetailViewController.swift */,
 				424D36532879AD6000F250F3 /* Main.storyboard */,
+				424D366B2879B0F800F250F3 /* SlideRightTransitionAnimator.swift */,
+				424D366D2879B10D00F250F3 /* PopTransitionAnimator.swift */,
+				424D366F2879B11700F250F3 /* RotateTransitionAnimator.swift */,
+				424D36692879AF1200F250F3 /* SlideDownTransitionAnimator.swift */,
 				424D36652879AE6700F250F3 /* MenuCell.swift */,
 				424D36562879AD6100F250F3 /* Assets.xcassets */,
 				424D36582879AD6100F250F3 /* LaunchScreen.storyboard */,
@@ -150,11 +162,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				424D366C2879B0F800F250F3 /* SlideRightTransitionAnimator.swift in Sources */,
 				424D36682879AE9600F250F3 /* MenuItem.swift in Sources */,
+				424D366A2879AF1200F250F3 /* SlideDownTransitionAnimator.swift in Sources */,
 				424D36522879AD6000F250F3 /* ViewController.swift in Sources */,
 				424D364E2879AD6000F250F3 /* AppDelegate.swift in Sources */,
 				424D36662879AE6700F250F3 /* MenuCell.swift in Sources */,
 				424D36642879ADF900F250F3 /* DetailViewController.swift in Sources */,
+				424D366E2879B10D00F250F3 /* PopTransitionAnimator.swift in Sources */,
+				424D36702879B11700F250F3 /* RotateTransitionAnimator.swift in Sources */,
 				424D36502879AD6000F250F3 /* SceneDelegate.swift in Sources */,
 				424D36622879ADED00F250F3 /* MenuViewController.swift in Sources */,
 			);

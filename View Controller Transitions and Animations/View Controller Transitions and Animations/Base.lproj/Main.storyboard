@@ -63,6 +63,7 @@
                                         <connections>
                                             <outlet property="thumbnailImageView" destination="ge1-DZ-4z9" id="PhC-4a-glX"/>
                                             <outlet property="titleLabel" destination="bwn-as-y5j" id="zKx-Xp-G7z"/>
+                                            <segue destination="jys-ds-J1U" kind="presentation" modalPresentationStyle="fullScreen" id="RCv-wP-AEo"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
