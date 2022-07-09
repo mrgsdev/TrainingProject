@@ -23,6 +23,7 @@
 - [x] [AutoLayoutApp](#16)
 - [x] [Grid Layouts Using Collection Views and Diffable Data Source](#17)
 - [x] [Collection Views Using UITraitCollection and Compositional Layout](#18)
+- [x] [View Controller Transitions and Animations](#19)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png)<a name="2"></a>
@@ -78,4 +79,9 @@
 ##
 # [Collection Views Using UITraitCollection and Compositional Layout](https://github.com/mrgsdev/TrainingProject/tree/main/Collection%20Views%20Using%20UITraitCollection%20and%20Compositional%20Layout)<a name="18"></a>
  ![io](https://user-images.githubusercontent.com/107209053/178025780-11c2e27b-cf40-4629-afe9-372c8da199c1.png)
+##
+<a name="19"></a>
+[View Controller Transitions and Animations](https://github.com/mrgsdev/TrainingProject/tree/main/View%20Controller%20Transitions%20and%20Animations)
+![qw](https://user-images.githubusercontent.com/107209053/178106745-5a23e5ba-323a-4407-aaae-87b139a1e04c.png)
+ 
 ##
