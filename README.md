@@ -74,14 +74,15 @@
 # [AutoLayoutApp](https://github.com/mrgsdev/TrainingProject/tree/main/AutoLayoutApp)<a name="16"></a>
 ![lk](https://user-images.githubusercontent.com/107209053/177510681-bb7acf01-2161-41ed-89c7-c3fcdf9ff098.png)
 ##
-# [Grid Layouts Using Collection Views and Diffable Data Source](https://github.com/mrgsdev/TrainingProject/tree/main/Grid%20Layouts%20Using%20Collection%20Views%20and%20Diffable%20Data%20Source)<a name="17"></a>
+<a name="17"></a>
+# [Grid Layouts Using Collection Views and Diffable Data Source](https://github.com/mrgsdev/TrainingProject/tree/main/Grid%20Layouts%20Using%20Collection%20Views%20and%20Diffable%20Data%20Source)
 ![w](https://user-images.githubusercontent.com/107209053/177765034-db8f3ddb-df71-4770-ae21-ef397a7134f7.png)
 ##
-# [Collection Views Using UITraitCollection and Compositional Layout](https://github.com/mrgsdev/TrainingProject/tree/main/Collection%20Views%20Using%20UITraitCollection%20and%20Compositional%20Layout)<a name="18"></a>
+<a name="18"></a>
+# [Collection Views Using UITraitCollection and Compositional Layout](https://github.com/mrgsdev/TrainingProject/tree/main/Collection%20Views%20Using%20UITraitCollection%20and%20Compositional%20Layout)
  ![io](https://user-images.githubusercontent.com/107209053/178025780-11c2e27b-cf40-4629-afe9-372c8da199c1.png)
 ##
 <a name="19"></a>
-[View Controller Transitions and Animations](https://github.com/mrgsdev/TrainingProject/tree/main/View%20Controller%20Transitions%20and%20Animations)
+# [View Controller Transitions and Animations](https://github.com/mrgsdev/TrainingProject/tree/main/View%20Controller%20Transitions%20and%20Animations)
 ![qw](https://user-images.githubusercontent.com/107209053/178106745-5a23e5ba-323a-4407-aaae-87b139a1e04c.png)
- 
 ##
