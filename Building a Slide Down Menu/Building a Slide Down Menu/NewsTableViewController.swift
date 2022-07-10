@@ -14,7 +14,15 @@ class NewsTableViewController: UITableViewController {
 
         self.title = "Home"
     }
-
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+    let sourceController = segue.source as! MenuTableViewController
+self.title = sourceController.currentItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let menuTableViewController = segue.destination as! MenuTableViewController
+        menuTableViewController.currentItem = self.title!
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

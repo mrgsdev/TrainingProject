@@ -88,6 +88,9 @@
                     <navigationItem key="navigationItem" title="News" id="Oe2-um-R5r">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="UNU-xP-msM">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="IZE-w3-hrD" kind="presentation" id="HkL-m6-9iX"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
@@ -100,7 +103,7 @@
             <objects>
                 <tableViewController id="IZE-w3-hrD" customClass="MenuTableViewController" customModule="Building_a_Slide_Down_Menu" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hms-yU-SXp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="c8E-Ns-u4E">
@@ -132,6 +135,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="enG-Ss-wXF" id="Vb2-2w-GTA"/>
+                                    <segue destination="hV7-wV-ohv" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="OGe-5U-daJ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -143,6 +147,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUz-Aj-35m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hV7-wV-ohv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1601" y="-233"/>
         </scene>
