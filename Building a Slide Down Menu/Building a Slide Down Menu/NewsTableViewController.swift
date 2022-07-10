@@ -6,25 +6,16 @@
 //
 
 import UIKit
-
 class NewsTableViewController: UITableViewController {
+    
     let menuTransitionManager = MenuTransitionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Home"
     }
-    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-        let sourceController = segue.source as! MenuTableViewController
-        self.title = sourceController.currentItem
-    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let menuTableViewController = segue.destination as! MenuTableViewController
-        menuTableViewController.currentItem = self.title!
-        menuTableViewController.transitioningDelegate = menuTransitionManager
-        menuTableViewController.modalPresentationStyle = .fullScreen
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,6 +23,10 @@ class NewsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // Return the number of sections
+        return 1
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows
@@ -71,5 +66,26 @@ class NewsTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: - Navigation
+    
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        let sourceController = segue.source as! MenuTableViewController
+        self.title = sourceController.currentItem
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let menuTableViewController = segue.destination as! MenuTableViewController
+        menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTableViewController.modalPresentationStyle = .fullScreen
+        
+        menuTransitionManager.delegate = self
+    }
+}
+extension NewsTableViewController: MenuTransitionManagerDelegate {
+    
+    func dismiss() {
+        dismiss(animated: true, completion: nil)
+    }
     
 }

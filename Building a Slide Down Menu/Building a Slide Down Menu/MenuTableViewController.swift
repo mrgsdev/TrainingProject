@@ -16,12 +16,7 @@ class MenuTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let menuTableViewController = segue.source as! MenuTableViewController
-        if let selectedIndexPath = menuTableViewController.tableView.indexPathForSelectedRow {
-            currentItem = menuItems[selectedIndexPath.row]
-        }
-    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -47,5 +42,14 @@ class MenuTableViewController: UITableViewController {
         cell.titleLabel.textColor = (menuItems[indexPath.row] == currentItem) ? UIColor.white : UIColor.gray
 
         return cell
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let menuTableViewController = segue.source as! MenuTableViewController
+        if let selectedIndexPath = menuTableViewController.tableView.indexPathForSelectedRow {
+            currentItem = menuItems[selectedIndexPath.row]
+        }
     }
 }
