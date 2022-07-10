@@ -31,7 +31,7 @@
 		424D3693287AF53000F250F3 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		424D3695287AF53F00F250F3 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		424D3697287AF54E00F250F3 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
-		424D3699287AF81600F250F3 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuTransitionManager.swift; path = "Building a Slide Down Menu/MenuTransitionManager.swift"; sourceTree = "<group>"; };
+		424D3699287AF81600F250F3 /* MenuTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTransitionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,6 @@
 		424D3671287AF4E200F250F3 = {
 			isa = PBXGroup;
 			children = (
-				424D3699287AF81600F250F3 /* MenuTransitionManager.swift */,
 				424D367C287AF4E200F250F3 /* Building a Slide Down Menu */,
 				424D367B287AF4E200F250F3 /* Products */,
 			);
@@ -65,6 +64,7 @@
 		424D367C287AF4E200F250F3 /* Building a Slide Down Menu */ = {
 			isa = PBXGroup;
 			children = (
+				424D3699287AF81600F250F3 /* MenuTransitionManager.swift */,
 				424D367D287AF4E200F250F3 /* AppDelegate.swift */,
 				424D367F287AF4E200F250F3 /* SceneDelegate.swift */,
 				424D3683287AF4E200F250F3 /* Main.storyboard */,

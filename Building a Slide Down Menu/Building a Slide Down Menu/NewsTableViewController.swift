@@ -8,34 +8,36 @@
 import UIKit
 
 class NewsTableViewController: UITableViewController {
-    
+    let menuTransitionManager = MenuTransitionManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.title = "Home"
     }
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
-    let sourceController = segue.source as! MenuTableViewController
-self.title = sourceController.currentItem
+        let sourceController = segue.source as! MenuTableViewController
+        self.title = sourceController.currentItem
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let menuTableViewController = segue.destination as! MenuTableViewController
         menuTableViewController.currentItem = self.title!
+        menuTableViewController.transitioningDelegate = menuTransitionManager
+        menuTableViewController.modalPresentationStyle = .fullScreen
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
- 
-
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows
         return 4
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
         
@@ -65,9 +67,9 @@ self.title = sourceController.currentItem
             cell.authorImageView.image = UIImage(named: "appcoda-fav-logo")
             
         }
-
+        
         return cell
     }
-
-
+    
+    
 }
