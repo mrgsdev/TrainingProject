@@ -23,7 +23,8 @@ class HotelTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.estimatedRowHeight = 95.0
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
     override func didReceiveMemoryWarning() {
