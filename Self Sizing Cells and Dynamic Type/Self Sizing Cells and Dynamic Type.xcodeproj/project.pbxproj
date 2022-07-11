@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		42C5C5BF287C180600B0237A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5C5BE287C180600B0237A /* AppDelegate.swift */; };
 		42C5C5C1287C180600B0237A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5C5C0287C180600B0237A /* SceneDelegate.swift */; };
-		42C5C5C3287C180600B0237A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5C5C2287C180600B0237A /* ViewController.swift */; };
 		42C5C5C6287C180600B0237A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C5C5C4287C180600B0237A /* Main.storyboard */; };
 		42C5C5C8287C180700B0237A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42C5C5C7287C180700B0237A /* Assets.xcassets */; };
 		42C5C5CB287C180700B0237A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42C5C5C9287C180700B0237A /* LaunchScreen.storyboard */; };
+		42C5C5D3287C18CE00B0237A /* HotelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5C5D2287C18CE00B0237A /* HotelTableViewCell.swift */; };
+		42C5C5D5287C18E300B0237A /* HotelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C5C5D4287C18E300B0237A /* HotelTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		42C5C5BB287C180600B0237A /* Self Sizing Cells and Dynamic Type.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Self Sizing Cells and Dynamic Type.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42C5C5BE287C180600B0237A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42C5C5C0287C180600B0237A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		42C5C5C2287C180600B0237A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42C5C5C5287C180600B0237A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		42C5C5C7287C180700B0237A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42C5C5CA287C180700B0237A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42C5C5CC287C180700B0237A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42C5C5D2287C18CE00B0237A /* HotelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewCell.swift; sourceTree = "<group>"; };
+		42C5C5D4287C18E300B0237A /* HotelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +60,11 @@
 			children = (
 				42C5C5BE287C180600B0237A /* AppDelegate.swift */,
 				42C5C5C0287C180600B0237A /* SceneDelegate.swift */,
-				42C5C5C2287C180600B0237A /* ViewController.swift */,
 				42C5C5C4287C180600B0237A /* Main.storyboard */,
 				42C5C5C7287C180700B0237A /* Assets.xcassets */,
 				42C5C5C9287C180700B0237A /* LaunchScreen.storyboard */,
+				42C5C5D2287C18CE00B0237A /* HotelTableViewCell.swift */,
+				42C5C5D4287C18E300B0237A /* HotelTableViewController.swift */,
 				42C5C5CC287C180700B0237A /* Info.plist */,
 			);
 			path = "Self Sizing Cells and Dynamic Type";
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42C5C5C3287C180600B0237A /* ViewController.swift in Sources */,
 				42C5C5BF287C180600B0237A /* AppDelegate.swift in Sources */,
+				42C5C5D3287C18CE00B0237A /* HotelTableViewCell.swift in Sources */,
 				42C5C5C1287C180600B0237A /* SceneDelegate.swift in Sources */,
+				42C5C5D5287C18E300B0237A /* HotelTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
