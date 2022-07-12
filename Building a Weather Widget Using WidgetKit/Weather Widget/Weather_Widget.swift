@@ -7,48 +7,78 @@
 
 import WidgetKit
 import SwiftUI
+import WeatherInfoKit
 
 struct Provider: TimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date())
+    
+    
+    var defaults = UserDefaults(suiteName: "group.idk.weatherpp")!
+    
+    func placeholder(in context: Context) -> WeatherEntry {
+        
+        let weatherData = WeatherData(temperature: 0, weather: "--")
+        return WeatherEntry(date: Date(), weatherData: weatherData)
     }
 
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date())
+    func getSnapshot(in context: Context, completion: @escaping (WeatherEntry) -> ()) {
+        
+        let weatherData = WeatherData(temperature: 30, weather: "Sunny")
+        let entry = WeatherEntry(date: Date(), weatherData: weatherData)
         completion(entry)
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+        
+        // The widget is scheduled to update every hour.
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate)
-            entries.append(entry)
+        let refreshDate = Calendar.current.date(byAdding: .minute, value: 60, to: currentDate)!
+        
+        // Get the location from defaults
+        guard let city = defaults.value(forKey: "city") as? String else {
+            
+            return
+        }
+        
+        WeatherService.sharedWeatherService().getCurrentWeather(location: city) { (data) in
+            
+            guard let weatherData = data else {
+                return
+            }
+            
+            let entry = WeatherEntry(date: currentDate, city: city, weatherData: weatherData)
+            let timeline = Timeline(entries: [entry], policy: .after(refreshDate))
+            
+            completion(timeline)
+            
         }
 
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
     }
 }
 
-struct SimpleEntry: TimelineEntry {
-    let date: Date
+struct WeatherEntry: TimelineEntry {
+    var date: Date
+    var city: String = "paris"
+    var weatherData: WeatherData
 }
 
 struct Weather_WidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack{
-            Text("Current Time")
+        VStack {
+            Text(entry.city.capitalized)
                 .font(.system(size: 16, weight: .black, design: .rounded))
-                .padding(.bottom,2)
-            Text(entry.date,style: .time)
-                .font(.system(size: 16, weight: .black, design: .rounded))
+                .padding(.bottom, 2)
+            Text(entry.weatherData.weather.capitalized)
+                .font(.footnote)
+                .padding(.bottom, 2)
+            Text("\(entry.weatherData.temperature)℃")
+                .font(.system(size: 20, weight: .black, design: .rounded))
+            Text(entry.date, style: .time)
+                .font(.footnote)
+                .padding(.top, 10)
         }
+        
     }
 }
 
@@ -60,14 +90,14 @@ struct Weather_Widget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             Weather_WidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This widget is designed to display the current weather infor mation.") 
+        .configurationDisplayName("Weather Widget")
+        .description("This widget is designed to display the curren weather information.")
     }
 }
 
 struct Weather_Widget_Previews: PreviewProvider {
     static var previews: some View {
-        Weather_WidgetEntryView(entry: SimpleEntry(date: Date()))
+        Weather_WidgetEntryView(entry: WeatherEntry(date: Date(), weatherData: WeatherData(temperature: 10, weather: "Cloudy")))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

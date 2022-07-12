@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 
 class LocationTableViewController: UITableViewController {
 
@@ -19,6 +20,8 @@ class LocationTableViewController: UITableViewController {
             selectedCountry = locations[1].trimmingCharacters(in: .whitespacesAndNewlines)
         }
     }
+    
+    var defaults = UserDefaults(suiteName: "group.idk.weatherpp")!
     
     private(set) var selectedCity = ""
     private(set) var selectedCountry = ""
@@ -60,6 +63,10 @@ class LocationTableViewController: UITableViewController {
         cell?.accessoryType = .checkmark
         if let location = cell?.textLabel?.text {
             selectedLocation = location
+            
+            defaults.setValue(selectedCity, forKey: "city")
+            
+            WidgetCenter.shared.reloadAllTimelines()
         }
         
         tableView.reloadData()
