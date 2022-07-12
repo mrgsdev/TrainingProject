@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import WeatherInfoKit
 class WeatherViewController: UIViewController {
 
     @IBOutlet var cityLabel: UILabel!
