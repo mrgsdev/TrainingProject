@@ -15,6 +15,7 @@
 		42DBC822287ECECA00BBD51F /* UIFont_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DBC821287ECECA00BBD51F /* UIFont_Ext.swift */; };
 		42DBC824287ECEF600BBD51F /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DBC823287ECEF600BBD51F /* NewsTableViewCell.swift */; };
 		42DBC826287ECF0000BBD51F /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DBC825287ECF0000BBD51F /* NewsTableViewController.swift */; };
+		42DBC828287ECFF000BBD51F /* FeedParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DBC827287ECFF000BBD51F /* FeedParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		42DBC821287ECECA00BBD51F /* UIFont_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont_Ext.swift; sourceTree = "<group>"; };
 		42DBC823287ECEF600BBD51F /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		42DBC825287ECF0000BBD51F /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		42DBC827287ECFF000BBD51F /* FeedParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				42DBC80D287ECE8E00BBD51F /* AppDelegate.swift */,
 				42DBC80F287ECE8E00BBD51F /* SceneDelegate.swift */,
 				42DBC813287ECE8E00BBD51F /* Main.storyboard */,
+				42DBC827287ECFF000BBD51F /* FeedParser.swift */,
 				42DBC823287ECEF600BBD51F /* NewsTableViewCell.swift */,
 				42DBC825287ECF0000BBD51F /* NewsTableViewController.swift */,
 				42DBC816287ECE8E00BBD51F /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DBC828287ECFF000BBD51F /* FeedParser.swift in Sources */,
 				42DBC822287ECECA00BBD51F /* UIFont_Ext.swift in Sources */,
 				42DBC80E287ECE8E00BBD51F /* AppDelegate.swift in Sources */,
 				42DBC824287ECEF600BBD51F /* NewsTableViewCell.swift in Sources */,
