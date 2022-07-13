@@ -7,7 +7,7 @@
 		<key>Building a Weather Widget Using WidgetKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
 		</dict>
 		<key>Weather WidgetExtension.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +17,7 @@
 		<key>WeatherInfoKit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 </dict>
