@@ -27,6 +27,7 @@
 - [x] [Building a Slide Down Menu](#20)
 - [x] [Self Sizing Cells and Dynamic Type](#21)
 - [x] [Building a Weather Widget Using WidgetKit](#22)
+- [x] [XML Parsing, RSS and Expandable Table View Cells](#23)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png) 
@@ -114,3 +115,7 @@
 <a name="22"></a>
 # [Building a Weather Widget Using WidgetKit](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20a%20Weather%20Widget%20Using%20WidgetKit)
  ![sa](https://user-images.githubusercontent.com/107209053/178464990-63318676-21ba-4b06-b7a8-67e68939376c.png)
+##
+<a name="22"></a>
+# [XML Parsing, RSS and Expandable Table View Cells](https://github.com/mrgsdev/TrainingProject/tree/main/XML%20Parsing%2C%20RSS%20and%20Expandable%20Table%20View%20Cells)
+![XML Parsing, RSS and Expandable Table View Cells](https://user-images.githubusercontent.com/107209053/178708917-b16668a2-9b6d-4173-927c-fcbe5e6191fd.png)
