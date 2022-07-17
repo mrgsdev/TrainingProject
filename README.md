@@ -28,6 +28,7 @@
 - [x] [Self Sizing Cells and Dynamic Type](#21)
 - [x] [Building a Weather Widget Using WidgetKit](#22)
 - [x] [XML Parsing, RSS and Expandable Table View Cells](#23)
+- [x] Applying a Blurred Background Using UIVisualEffect(#24)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png) 
@@ -119,3 +120,7 @@
 <a name="23"></a>
 # [XML Parsing, RSS and Expandable Table View Cells](https://github.com/mrgsdev/TrainingProject/tree/main/XML%20Parsing%2C%20RSS%20and%20Expandable%20Table%20View%20Cells)
 ![XML Parsing, RSS and Expandable Table View Cells](https://user-images.githubusercontent.com/107209053/178708917-b16668a2-9b6d-4173-927c-fcbe5e6191fd.png)
+<a name="24"></a>
+# [Applying a Blurred Background Using UIVisualEffect](https://github.com/mrgsdev/TrainingProject/tree/main/Applying%20a%20Blurred%20Background%20Using%20UIVisualEffect)
+![(1) копия](https://user-images.githubusercontent.com/107209053/179398316-0ba3562f-ee5c-41df-80f1-ed40db2741db.png)
+##
