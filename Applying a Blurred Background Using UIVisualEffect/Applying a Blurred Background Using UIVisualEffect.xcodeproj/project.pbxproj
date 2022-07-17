@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		422B98352884350B00B3998E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B98342884350B00B3998E /* AppDelegate.swift */; };
 		422B98372884350B00B3998E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B98362884350B00B3998E /* SceneDelegate.swift */; };
-		422B98392884350B00B3998E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B98382884350B00B3998E /* ViewController.swift */; };
 		422B983C2884350B00B3998E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422B983A2884350B00B3998E /* Main.storyboard */; };
 		422B983E2884350B00B3998E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 422B983D2884350B00B3998E /* Assets.xcassets */; };
 		422B98412884350B00B3998E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 422B983F2884350B00B3998E /* LaunchScreen.storyboard */; };
@@ -20,7 +19,6 @@
 		422B98312884350B00B3998E /* Applying a Blurred Background Using UIVisualEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Applying a Blurred Background Using UIVisualEffect.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		422B98342884350B00B3998E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		422B98362884350B00B3998E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		422B98382884350B00B3998E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		422B983B2884350B00B3998E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		422B983D2884350B00B3998E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		422B98402884350B00B3998E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +58,6 @@
 			children = (
 				422B98342884350B00B3998E /* AppDelegate.swift */,
 				422B98362884350B00B3998E /* SceneDelegate.swift */,
-				422B98382884350B00B3998E /* ViewController.swift */,
 				422B983A2884350B00B3998E /* Main.storyboard */,
 				422B983D2884350B00B3998E /* Assets.xcassets */,
 				422B98482884358F00B3998E /* LoginViewController.swift */,
@@ -142,7 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				422B98492884358F00B3998E /* LoginViewController.swift in Sources */,
-				422B98392884350B00B3998E /* ViewController.swift in Sources */,
 				422B98352884350B00B3998E /* AppDelegate.swift in Sources */,
 				422B98372884350B00B3998E /* SceneDelegate.swift in Sources */,
 			);

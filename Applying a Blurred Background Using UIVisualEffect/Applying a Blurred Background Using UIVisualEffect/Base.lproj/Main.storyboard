@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-c0-zBk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjr-UQ-Ye7" userLabel="Login View">
                                 <rect key="frame" x="67.5" y="74" width="279" height="266"/>
                                 <subviews>
@@ -120,18 +123,26 @@
                         <viewLayoutGuide key="safeArea" id="g1P-fc-HzT"/>
                         <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4wJ-c0-zBk" firstAttribute="trailing" secondItem="MNi-QY-HW2" secondAttribute="trailing" id="4YK-cD-BaK"/>
+                            <constraint firstItem="4wJ-c0-zBk" firstAttribute="leading" secondItem="MNi-QY-HW2" secondAttribute="leading" id="7oC-FZ-gSN"/>
                             <constraint firstItem="g1P-fc-HzT" firstAttribute="centerX" secondItem="sjr-UQ-Ye7" secondAttribute="centerX" id="QmM-Jv-8Mu"/>
+                            <constraint firstItem="4wJ-c0-zBk" firstAttribute="top" secondItem="MNi-QY-HW2" secondAttribute="top" id="WCr-fw-sru"/>
                             <constraint firstItem="sjr-UQ-Ye7" firstAttribute="top" secondItem="g1P-fc-HzT" secondAttribute="top" constant="30" id="gGd-IM-6aN"/>
+                            <constraint firstAttribute="bottom" secondItem="4wJ-c0-zBk" secondAttribute="bottom" id="sX4-GN-I81"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="4wJ-c0-zBk" id="K8p-Ou-x3C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLX-wR-6s7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="107.49625187406298"/>
+            <point key="canvasLocation" x="136.23188405797103" y="107.14285714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="Doodle Icons-12" width="2133" height="2133"/>
+        <image name="cloud" width="2448" height="3264"/>
         <systemColor name="darkTextColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
