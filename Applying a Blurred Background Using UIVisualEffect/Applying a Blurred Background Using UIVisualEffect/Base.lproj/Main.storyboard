@@ -28,8 +28,8 @@
                                             <constraint firstAttribute="height" constant="50" id="cFe-QQ-GMw"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to AppCoda" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0u-UL-eKz">
-                                        <rect key="frame" x="57" y="72" width="165" height="26"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in to App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B0u-UL-eKz">
+                                        <rect key="frame" x="80.5" y="72" width="118.5" height="26"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
                                         <color key="textColor" systemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
