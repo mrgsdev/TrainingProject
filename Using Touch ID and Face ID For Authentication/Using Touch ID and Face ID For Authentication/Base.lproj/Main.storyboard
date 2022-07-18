@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oCR-aV-DOp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -13,7 +13,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ckj-xl-sxb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="muq-lJ-wNc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -28,13 +28,13 @@
         <!--Home-->
         <scene sceneID="Ag3-MN-jTV">
             <objects>
-                <tableViewController id="28B-vw-WaE" customClass="NewsTableViewController" customModule="TouchID" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="28B-vw-WaE" customClass="NewsTableViewController" customModule="Using_Touch_ID_and_Face_ID_For_Authentication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="303" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xd1-nB-2QE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="303" id="eZ5-QP-JYj" customClass="NewsTableViewCell" customModule="TouchID" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="303" id="eZ5-QP-JYj" customClass="NewsTableViewCell" customModule="Using_Touch_ID_and_Face_ID_For_Authentication" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="303"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eZ5-QP-JYj" id="FxA-Zo-vQo">
@@ -112,7 +112,7 @@
         <!--Login View Controller-->
         <scene sceneID="QQj-05-LTv">
             <objects>
-                <viewController id="oCR-aV-DOp" customClass="LoginViewController" customModule="TouchID" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oCR-aV-DOp" customClass="LoginViewController" customModule="Using_Touch_ID_and_Face_ID_For_Authentication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PBg-0a-EUG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,6 +238,7 @@
                         <outlet property="emailTextField" destination="0iO-Xn-eYZ" id="dyK-qh-uXZ"/>
                         <outlet property="loginView" destination="fAQ-kk-Vdf" id="aCk-hJ-vTH"/>
                         <outlet property="passwordTextField" destination="hqG-JB-zi6" id="9k3-Da-R2v"/>
+                        <segue destination="ckj-xl-sxb" kind="presentation" identifier="showHomeScreen" modalTransitionStyle="crossDissolve" id="oxP-7m-fIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMf-9i-44f" userLabel="First Responder" sceneMemberID="firstResponder"/>

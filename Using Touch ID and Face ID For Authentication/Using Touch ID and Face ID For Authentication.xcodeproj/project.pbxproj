@@ -13,6 +13,8 @@
 		42569B22288539A8002CE5B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42569B21288539A8002CE5B2 /* Assets.xcassets */; };
 		42569B25288539A8002CE5B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42569B23288539A8002CE5B2 /* LaunchScreen.storyboard */; };
 		42569B2D28853B6E002CE5B2 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B2C28853B6E002CE5B2 /* NewsTableViewController.swift */; };
+		42569B2F28853B97002CE5B2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B2E28853B97002CE5B2 /* NewsTableViewCell.swift */; };
+		42569B3128853BA5002CE5B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B3028853BA5002CE5B2 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		42569B24288539A8002CE5B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42569B26288539A8002CE5B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42569B2C28853B6E002CE5B2 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		42569B2E28853B97002CE5B2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		42569B3028853BA5002CE5B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				42569B18288539A8002CE5B2 /* AppDelegate.swift */,
 				42569B1A288539A8002CE5B2 /* SceneDelegate.swift */,
 				42569B2C28853B6E002CE5B2 /* NewsTableViewController.swift */,
+				42569B2E28853B97002CE5B2 /* NewsTableViewCell.swift */,
+				42569B3028853BA5002CE5B2 /* LoginViewController.swift */,
 				42569B1E288539A8002CE5B2 /* Main.storyboard */,
 				42569B21288539A8002CE5B2 /* Assets.xcassets */,
 				42569B23288539A8002CE5B2 /* LaunchScreen.storyboard */,
@@ -140,6 +146,8 @@
 			files = (
 				42569B19288539A8002CE5B2 /* AppDelegate.swift in Sources */,
 				42569B1B288539A8002CE5B2 /* SceneDelegate.swift in Sources */,
+				42569B2F28853B97002CE5B2 /* NewsTableViewCell.swift in Sources */,
+				42569B3128853BA5002CE5B2 /* LoginViewController.swift in Sources */,
 				42569B2D28853B6E002CE5B2 /* NewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
