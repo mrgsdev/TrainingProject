@@ -15,6 +15,7 @@
 		42569B2D28853B6E002CE5B2 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B2C28853B6E002CE5B2 /* NewsTableViewController.swift */; };
 		42569B2F28853B97002CE5B2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B2E28853B97002CE5B2 /* NewsTableViewCell.swift */; };
 		42569B3128853BA5002CE5B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42569B3028853BA5002CE5B2 /* LoginViewController.swift */; };
+		42569B3428853CF6002CE5B2 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42569B3328853CF6002CE5B2 /* LocalAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		42569B2C28853B6E002CE5B2 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		42569B2E28853B97002CE5B2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		42569B3028853BA5002CE5B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		42569B3328853CF6002CE5B2 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42569B3428853CF6002CE5B2 /* LocalAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +49,7 @@
 			children = (
 				42569B17288539A8002CE5B2 /* Using Touch ID and Face ID For Authentication */,
 				42569B16288539A8002CE5B2 /* Products */,
+				42569B3228853CF6002CE5B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +75,14 @@
 				42569B26288539A8002CE5B2 /* Info.plist */,
 			);
 			path = "Using Touch ID and Face ID For Authentication";
+			sourceTree = "<group>";
+		};
+		42569B3228853CF6002CE5B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				42569B3328853CF6002CE5B2 /* LocalAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

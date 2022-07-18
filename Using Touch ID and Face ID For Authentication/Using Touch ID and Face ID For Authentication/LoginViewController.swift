@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LoginViewController: UIViewController {
-    
     @IBOutlet weak var backgroundImageView:UIImageView!
     @IBOutlet weak var loginView:UIView!
     @IBOutlet weak var emailTextField:UITextField!
@@ -29,8 +29,9 @@ class LoginViewController: UIViewController {
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
         
-        showLoginDialog()
+        loginView.isHidden = true
 
+        authenticateWithBiometric()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,5 +53,81 @@ class LoginViewController: UIViewController {
         }, completion: nil)
         
     }
+    
+    @IBAction func authenticateWithPassword() {
+        
+        if emailTextField.text == "hi@appcoda.com" && passwordTextField.text == "1234" {
+            performSegue(withIdentifier: "showHomeScreen", sender: nil)
+        } else {
+            // Shake to indicate wrong login ID/password
+            loginView.transform = CGAffineTransform(translationX: 25, y: 0)
+            UIView.animate(withDuration: 0.2, delay: 0.0, usingSpringWithDamping: 0.15, initialSpringVelocity: 0.3, options: .curveEaseInOut, animations: {
+                
+                self.loginView.transform = CGAffineTransform.identity
+                
+            }, completion: nil)
+        }
+    }
 
+    func authenticateWithBiometric() {
+        // Get the local authentication context.
+        let localAuthContext = LAContext()
+        let reasonText = "Authentication is required to sign in AppCoda"
+        var authError: NSError?
+        
+        if !localAuthContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+            
+            if let error = authError {
+                print(error.localizedDescription)
+            }
+            
+            // Display the login dialog when Touch ID is not available (e.g. in simulator)
+            showLoginDialog()
+            
+            return
+        }
+        
+        // Perform the Biometric authentication
+        localAuthContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonText, reply: { (success: Bool, error: Error?) -> Void in
+            
+            // Failure workflow
+            if !success {
+                if let error = error {
+                    switch error {
+                    case LAError.authenticationFailed:
+                        print("Authentication failed")
+                    case LAError.passcodeNotSet:
+                        print("Passcode not set")
+                    case LAError.systemCancel:
+                        print("Authentication was canceled by system")
+                    case LAError.userCancel:
+                        print("Authentication was canceled by the user")
+                    case LAError.biometryNotEnrolled:
+                        print("Authentication could not start because you haven't enrolled either Touch ID or Face ID on your device.")
+                    case LAError.biometryNotAvailable:
+                        print("Authentication could not start because Touch ID / Face ID is not available.")
+                    case LAError.userFallback:
+                        print("User tapped the fallback button (Enter Password).")
+                    default:
+                        print(error.localizedDescription)
+                    }
+                }
+                
+                // Fallback to password authentication
+                OperationQueue.main.addOperation({
+                    self.showLoginDialog()
+                })
+              
+            } else {
+            
+                // Success workflow
+                
+                print("Successfully authenticated")
+                OperationQueue.main.addOperation({
+                    self.performSegue(withIdentifier: "showHomeScreen", sender: nil)
+                })
+            }
+            
+        })
+    }
 }
