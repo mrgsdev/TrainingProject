@@ -29,6 +29,7 @@
 - [x] [Building a Weather Widget Using WidgetKit](#22)
 - [x] [XML Parsing, RSS and Expandable Table View Cells](#23)
 - [x] [Applying a Blurred Background Using UIVisualEffect](#24)
+- [x] [Using Touch ID and Face ID For Authentication](#25)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png) 
@@ -123,4 +124,8 @@
 <a name="24"></a>
 # [Applying a Blurred Background Using UIVisualEffect](https://github.com/mrgsdev/TrainingProject/tree/main/Applying%20a%20Blurred%20Background%20Using%20UIVisualEffect)
 ![(1) копия](https://user-images.githubusercontent.com/107209053/179398316-0ba3562f-ee5c-41df-80f1-ed40db2741db.png)
+##
+<a name="25"></a>
+# [Using Touch ID and Face ID For Authentication](https://github.com/mrgsdev/TrainingProject/tree/main/Using%20Touch%20ID%20and%20Face%20ID%20For%20Authentication)
+![Using Touch ID and Face ID For Authentication](https://user-images.githubusercontent.com/107209053/179462626-57463e3e-1a48-426c-9d21-36de78175e76.png)
 ##
