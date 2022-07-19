@@ -131,7 +131,7 @@
 ![Using Touch ID and Face ID For Authentication](https://user-images.githubusercontent.com/107209053/179462626-57463e3e-1a48-426c-9d21-36de78175e76.png)
 ##
 <a name="26"></a>
-# [Using Touch ID and Face ID For Authentication](https://github.com/mrgsdev/TrainingProject/tree/main/Carousel-Like%20User%20Interface%20with%20Paging%20Support)
+# [Carousel-Like User Interface with Paging Support](https://github.com/mrgsdev/TrainingProject/tree/main/Carousel-Like%20User%20Interface%20with%20Paging%20Support)
 ![Carousel-Like User Interface with Paging Support](https://user-images.githubusercontent.com/107209053/179700298-6930b085-f5a5-4fec-8e54-e1d1038f3749.png)
 ##
 
