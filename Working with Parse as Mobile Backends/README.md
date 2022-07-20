@@ -1,9 +1,10 @@
+## Screenshot
+![Working with Parse as Mobile Backends](https://user-images.githubusercontent.com/107209053/179983620-2a0b8592-c813-4fe8-9177-ceb140e190ee.png)
 
 
-
-
+## Tutorial 
 ### Creating Your App on Parse
-click the Build new app button to create a new application. Simply use "Working with Parse as Mobile Backends" as the app name and click Create.
+Click the Build new app button to create a new application. Simply use "Working with Parse as Mobile Backends" as the app name and click Create.
 <img width="1440" alt="Снимок экрана 2022-07-20 в 13 23 25" src="https://user-images.githubusercontent.com/107209053/179959657-70e39205-a1c1-499d-a02e-cff7f350dc27.png">
 
 Now click the Create a class button on the side menu to create a new class. Set the name to Trip and type to Custom , and then click Create class to proceed. Once created, you should see the class under the Browser section of the sidebar menu.
@@ -22,7 +23,7 @@ private var trips = [
 To put the first item of the array into Parse, fill in the values of the row like this:
 <img width="1440" alt="Снимок экрана 2022-07-20 в 13 55 48" src="https://user-images.githubusercontent.com/107209053/179965664-438e6497-9983-4e25-b00c-36dffe7a3f30.png">
 <img width="1440" alt="Снимок экрана 2022-07-20 в 14 01 41" src="https://user-images.githubusercontent.com/107209053/179966681-f7960504-a46a-41a4-bdcd-8a6beda31d2b.png">
-
+<img width="641" alt="Снимок экрана 2022-07-20 в 14 49 57" src="https://user-images.githubusercontent.com/107209053/179974991-25a2caa2-2fb2-4bfe-ba05-6b2335e487ad.png">
 ### Configuring the Xcode Project for Parse
  The very first thing to do is to install the Parse SDK. You can either install it using CocoaPods.
  #### Using CocoaPods
@@ -45,8 +46,7 @@ end
  <img width="299" alt="Снимок экрана 2022-07-20 в 14 15 14" src="https://user-images.githubusercontent.com/107209053/179968895-8f52d4ce-0856-444c-ba22-52907ba24c42.png">
  <img width="495" alt="Снимок экрана 2022-07-20 в 14 20 12" src="https://user-images.githubusercontent.com/107209053/179969682-8ec97d74-857a-4ca1-a834-423301134475.png">
 
-Select AppDelegate.swift. Insert an import statement at the very beginning to import the Parse framework:
-```swift import Parse```
+Select AppDelegate.swift. Insert an import statement at the very beginning to import the Parse framework:```import Parse```
 Next, add the following code in the application(_:didFinishLaunchingWithOptions:) method to initialize Parse:
 ```swift
 // Initialize Parse.
@@ -76,8 +76,7 @@ print("Error: \(error) \(error.localizedDescription)") return
 You create a PFQuery object with a specific class name that matches the one created on Parse. For example, for the TripCard app, the class name is Trip . By calling the
 findObjectsInBackground method of the query object, the app will go up to Parse and retrieve the available Trip objects. The method works in an asynchronous manner. When it finishes, the block of code will be called and you can perform additional processing based on the returned results.
 
-First, open the TripViewController.swift file and change the declaration of trips array to this:
-```swift private var trips = [Trip]() ```
+First, open the TripViewController.swift file and change the declaration of trips array to this: ```private var trips = [Trip]() ```
 If you look into the Trip structure (i.e. Trip.swift ), you may notice that the featuredImage property is of the type UIImage . As we have defined the featuredImage
 column as a File type on Parse, we have to change the type of the featuredImage property accordingly. This will allow us to convert a PFObject to a Trip object easily.
 ```swift
@@ -127,5 +126,141 @@ struct Trip: Hashable {
 ```
 Here we added another initialization method for PFObject and a helper method called toPFObject . In the method, we change the type of featuredImage from UIImage to PFFile . For the purpose of convenience, we create a new initialization method for PFObject and another method for PFObject conversion.
 
-Next, open the TripViewController.swift file and insert the following import statement:
-```swift import Parse ```
+Next, open the TripViewController.swift file and insert the following import statement: ```import Parse ```
+Then add the following method:
+```swift
+  func loadTripsFromParse() {
+        // Clear up the array
+        trips.removeAll(keepingCapacity: true)
+        // Pull data from Parse
+        let query = PFQuery(className: "Trip")
+        query.findObjectsInBackground { (objects, error) -> Void in
+            if let error = error {
+                print("Error: \(error) \(error.localizedDescription)")
+                return
+            }
+            if let objects = objects {
+                objects.forEach { (object) in
+                    // Convert PFObject into Trip object
+                    let trip = Trip(pfObject: object)
+                    self.trips.append(trip)
+                }
+            }
+            self.updateSnapshot()
+        }
+    }
+```
+The loadTripsFromParse method is created for retrieving trip information from Parse. At the very beginning, we clear out the trips array so as to have a fresh start. We then pull the trip data from the Parse cloud using PFQuery . If the objects are successfully retrieved from the cloud, we convert each of the PFObjects into Trip objects and append them to the trips array. Lastly, we call the updateSnapshot() method to reload the collection view.
+For the ```configureDataSource()``` method, you will need to change the following line of code from:
+
+
+```swift  
+ 
+ //cell.imageView.image = trip.featuredImage // delete
+  // Load image in background
+  cell.imageView.image = UIImage()
+  if let featuredImage = trip.featuredImage {
+     featuredImage.getDataInBackground { (imageData, error) in
+     if let tripImageData = imageData {
+     cell.imageView.image = UIImage(data: tripImageData)
+     }
+    }
+  }
+ ```
+The trip images are no longer bundled in the app. Instead, we will pull them from the Parse cloud. The time required to load the images varies depending on the network speed. This is why we handle the image download in the background. Parse stores files (such as images, audio, and documents) in the cloud in the form of PFFile . We use
+PFFile to reference the featured image. The class provides the getDataInBackground method to perform the file download in background. Once the download completes, we load it onto the screen.
+Finally, insert this line of code in the ```viewDidLoad()``` method to start the data retrieval: ```loadTripsFromParse()```
+
+### Refreshing Data
+
+Currently, there is no way to refresh the data. Let's add a button to the Trip View Controller in the storyboard. When a user taps the button, the app will go up to Parse and refresh the trip information.
+
+<img width="189" alt="Снимок экрана 2022-07-20 в 14 59 57" src="https://user-images.githubusercontent.com/107209053/179976620-802d214d-0224-4e9e-a346-198ef9cd0d2c.png">
+
+Next, insert an action method
+```swift
+@IBAction func reloadButtonTapped(sender: Any) {
+    loadTripsFromParse()
+}
+```
+### Caching for Speed and Offline Access
+Disable your iPhone or the simulator's network connection and run the app again. 
+The app will not be able to display any trips with the following error in the console:
+```
+2021-01-27 14:10:01.035792+0800 Working with Parse as Mobile Backends[61245:12080046] 
+[Error]: The Internet con nection appears to be offline. (Code: 100, Version: 1.19.1)
+2021-01-27 14:10:01.041338+0800 Working with Parse as Mobile Backends[61245:12080046] 
+[Error]: Network connecti on failed. Making attempt 3 after sleeping for 6.397498 seconds.
+```
+There is a better way to handle this situation. Parse has a built-in support for caching that makes it a lot easier to save query results on local disk. In case if the Internet access is not available, your app can load the result from local cache.
+Caching also improves the app's performance. Instead of loading data from Parse every time when the app runs, it retrieves the data from cache upon startup.
+In the default setting, caching is disabled. However, you can easily enable it by writing a single line of code. Add the following code to the loadTripsFromParse method after the initialization of PFQuery : ```  query.cachePolicy = PFCachePolicy.networkElseCache ```
+
+The Parse query supports various types of cache policy. The ```networkElseCache``` policy is just one of them. It first loads data from the network, then if that fails, it loads results from the cache.
+Now compile and run the app again. After you run it once (with WiFi enabled), disable the WiFi or other network connections and launch the app again. 
+This time, your app should be able to show the trips even if the network is unavailable.
+
+### Updating Data on Parse
+
+When you like a trip by tapping the heart button, the result is not saved to the Parse cloud because we haven't written any code for pushing the updates to the cloud.
+With the Parse SDK, it is pretty simple to update a PFObject . Recalled that each
+PFObject comes with a unique object ID, all you need to do is to set some new data to an
+existing PFObject and then call the saveInBackground method to upload the changes to the cloud. Based on the object ID, Parse updates the data of the specific object.
+
+```swift
+extension TripViewController: TripCollectionCellDelegate {
+    
+    func didLikeButtonPressed(cell: TripCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            trips[indexPath.row].isLiked = trips[indexPath.row].isLiked ? false : true
+            cell.isLiked = trips[indexPath.row].isLiked
+        }
+    }
+    
+}
+```
+To
+```swift
+func didLikeButtonPressed(cell: TripCollectionViewCell) {
+        if let indexPath = collectionView.indexPath(for: cell) {
+            trips[indexPath.row].isLiked = trips[indexPath.row].isLiked ? false : true
+            cell.isLiked = trips[indexPath.row].isLiked
+            
+            // Update the trip on Parse
+            trips[indexPath.row].toPFObject().saveInBackground(block: { (success, error) -> Void in
+                if (success) {
+                    print("Successfully updated the trip")
+                } else {
+                    print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                }
+            })
+        }
+    }
+
+```
+To upload the update to the Parse cloud, we first call the toPFObject method of the selected Trip object to convert itself to a PFObject . If you look into the toPFObject method of the Trip class, you will notice that the trip ID is set as the object ID of the
+PFObject . This is how Parse identifies the object to update.
+Once we have the PFObject , we simply call the saveInBackground method to upload the
+changes to Parse.
+
+### Deleting Data from Parse
+Similarly, PFObject provides various methods for object deletion. In short, you call up the deleteInBackground method of the PBObject class to delete the object from Parse.
+
+Currently, the TripCard app does not allow users to remove a trip. We will modify the app to let users swipe up a trip item to delete it. First, switch over to Main.storyboard and add a trash button in the cell. You can set the image of the button to trash .
+
+Next, modify the ```TripCollectionViewCell.swift``` file and update the ```TripCollectionCellDelegate``` protocol like this:
+```swift
+protocol TripCollectionCellDelegate {
+func didLikeButtonPressed(cell: TripCollectionViewCell) 
+func didTrashButtonPressed(cell: TripCollectionViewCell)
+}
+```
+We added one more method for the trash button. In the ```TripCollectionViewCell``` class, create a new action method:
+```swift
+@IBAction func trashButtonTapped(sender: AnyObject) { 
+delegate?.didTrashButtonPressed(cell: self)
+}
+```
+We first find out which trip object the user has selected. Then we call the deleteInBackground method to delete it from Parse. If the operation completes
+successfully, we remove the item from the collection view by updating the snapshot.
+Lastly, switch back to Main.storyboard and connect the action method with the trash button.
