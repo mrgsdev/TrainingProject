@@ -7,9 +7,9 @@
 
 
 import UIKit
-
+import Parse
 class TripViewController: UIViewController {
-
+    
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var collectionView: UICollectionView!
     
@@ -19,21 +19,11 @@ class TripViewController: UIViewController {
         case all
     }
     
-    private var trips = [Trip(tripId: "Paris001", city: "Paris", country: "France", featuredImage: UIImage(named: "paris"), price: 2000, totalDays: 5, isLiked: false),
-        Trip(tripId: "Rome001", city: "Rome", country: "Italy", featuredImage: UIImage(named: "rome"), price: 800, totalDays: 3, isLiked: false),
-        Trip(tripId: "Istanbul001", city: "Istanbul", country: "2", featuredImage: UIImage(named: "istanbul"), price: 2200, totalDays: 10, isLiked: false),
-        Trip(tripId: "London001", city: "London", country: "United Kingdom", featuredImage: UIImage(named: "london"), price: 3000, totalDays: 4, isLiked: false),
-                         
-                         
-        Trip(tripId: "Sydney001", city: "Sydney", country: "Australia", featuredImage: UIImage(named: "sydney"), price: 2500, totalDays: 8, isLiked: false),
-        Trip(tripId: "Santorini001", city: "Santorini", country: "Greece", featuredImage: UIImage(named: "santorini"), price: 1800, totalDays: 7, isLiked: false),
-        Trip(tripId: "NewYork001", city: "New York", country: "United States", featuredImage: UIImage(named: "newyork"), price: 900, totalDays: 3, isLiked: false),
-        Trip(tripId: "Kyoto001", city: "Kyoto", country: "Japan", featuredImage: UIImage(named: "kyoto"), price: 1000, totalDays: 5, isLiked: false)
-    ]
+    private var trips = [Trip]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Apply blurring effect
         backgroundImageView.image = UIImage(named: "cloud")
         let blurEffect = UIBlurEffect(style: .dark)
@@ -44,14 +34,14 @@ class TripViewController: UIViewController {
         collectionView.dataSource = dataSource
         collectionView.collectionViewLayout = createLayout()
         collectionView.backgroundColor = UIColor.clear
-        
+        loadTripsFromParse()
         updateSnapshot()
     }
-
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+    
     private func createLayout() -> UICollectionViewLayout {
         
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),heightDimension: .fractionalHeight(1.0))
@@ -77,7 +67,7 @@ class TripViewController: UIViewController {
 extension TripViewController {
     
     func configureDataSource() -> UICollectionViewDiffableDataSource<Section, Trip> {
-
+        
         let dataSource = UICollectionViewDiffableDataSource<Section, Trip>(collectionView: collectionView) { (collectionView, indexPath, imageName) -> UICollectionViewCell? in
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TripCollectionViewCell
@@ -88,7 +78,17 @@ extension TripViewController {
                 cell.countryLabel.text = trip.country
                 cell.totalDaysLabel.text = "\(trip.totalDays) days"
                 cell.priceLabel.text = "$\(String(trip.price))"
-                cell.imageView.image = trip.featuredImage
+//              cell.imageView.image = trip.featuredImage
+                // Load image in background
+                cell.imageView.image = UIImage()
+                if let featuredImage = trip.featuredImage {
+                    featuredImage.getDataInBackground { (imageData, error) in
+                        if let tripImageData = imageData {
+                            cell.imageView.image = UIImage(data: tripImageData)
+                        }
+                    }
+                
+                }
             }
             
             // Add rounded corner
@@ -96,18 +96,38 @@ extension TripViewController {
             
             return cell
         }
-
+        
         return dataSource
     }
     
     func updateSnapshot(animatingChange: Bool = false) {
-
+        
         // Create a snapshot and populate the data
         var snapshot = NSDiffableDataSourceSnapshot<Section, Trip>()
         snapshot.appendSections([.all])
         snapshot.appendItems(trips, toSection: .all)
-    
+        
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    func loadTripsFromParse() {
+        // Clear up the array
+        trips.removeAll(keepingCapacity: true)
+        // Pull data from Parse
+        let query = PFQuery(className: "Trip")
+        query.findObjectsInBackground { (objects, error) -> Void in
+            if let error = error {
+                print("Error: \(error) \(error.localizedDescription)")
+                return
+            }
+            if let objects = objects {
+                objects.forEach { (object) in
+                    // Convert PFObject into Trip object
+                    let trip = Trip(pfObject: object)
+                    self.trips.append(trip)
+                }
+            }
+            self.updateSnapshot()
+        }
     }
 }
 
