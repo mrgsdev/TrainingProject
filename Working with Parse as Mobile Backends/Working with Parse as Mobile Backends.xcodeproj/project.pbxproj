@@ -13,6 +13,9 @@
 		425842A328880AC7008F197D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425842A128880AC7008F197D /* Main.storyboard */; };
 		425842A528880AC7008F197D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 425842A428880AC7008F197D /* Assets.xcassets */; };
 		425842A828880AC7008F197D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 425842A628880AC7008F197D /* LaunchScreen.storyboard */; };
+		425842B028880B45008F197D /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425842AF28880B45008F197D /* Trip.swift */; };
+		425842B328880B6E008F197D /* TripCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425842B228880B6E008F197D /* TripCollectionViewCell.swift */; };
+		425842B628880BD6008F197D /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425842B528880BD6008F197D /* TripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		425842A428880AC7008F197D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		425842A728880AC7008F197D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		425842A928880AC7008F197D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		425842AF28880B45008F197D /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		425842B228880B6E008F197D /* TripCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCollectionViewCell.swift; sourceTree = "<group>"; };
+		425842B528880BD6008F197D /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		4258429A28880AC7008F197D /* Working with Parse as Mobile Backends */ = {
 			isa = PBXGroup;
 			children = (
+				425842B728880BDE008F197D /* Cotroller */,
+				425842B428880B85008F197D /* View */,
+				425842B128880B4B008F197D /* Model */,
 				4258429B28880AC7008F197D /* AppDelegate.swift */,
 				4258429D28880AC7008F197D /* SceneDelegate.swift */,
 				4258429F28880AC7008F197D /* ViewController.swift */,
@@ -65,6 +74,30 @@
 				425842A928880AC7008F197D /* Info.plist */,
 			);
 			path = "Working with Parse as Mobile Backends";
+			sourceTree = "<group>";
+		};
+		425842B128880B4B008F197D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				425842AF28880B45008F197D /* Trip.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		425842B428880B85008F197D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				425842B228880B6E008F197D /* TripCollectionViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		425842B728880BDE008F197D /* Cotroller */ = {
+			isa = PBXGroup;
+			children = (
+				425842B528880BD6008F197D /* TripViewController.swift */,
+			);
+			path = Cotroller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				425842B028880B45008F197D /* Trip.swift in Sources */,
 				425842A028880AC7008F197D /* ViewController.swift in Sources */,
 				4258429C28880AC7008F197D /* AppDelegate.swift in Sources */,
+				425842B628880BD6008F197D /* TripViewController.swift in Sources */,
+				425842B328880B6E008F197D /* TripCollectionViewCell.swift in Sources */,
 				4258429E28880AC7008F197D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
