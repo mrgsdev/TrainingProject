@@ -2,7 +2,18 @@
 ![Working with Parse as Mobile Backends](https://user-images.githubusercontent.com/107209053/179983620-2a0b8592-c813-4fe8-9177-ceb140e190ee.png)
 
 
-# Tutorial 
+# Tutorial
+
+- [Creating Your App on Parse](#1)
+- [Configuring the Xcode Project for Parse](#2)
+- [Connecting with Parse](#3)
+- [Retrieving Data from Parse](#4)
+- [Refreshing Data](#5)
+- [Caching for Speed and Offline Access](#6)
+- [Updating Data on Parse](#7)
+- [Deleting Data from Parse](#8)
+
+<a name="1"></a>
 ### Creating Your App on Parse
 Click the Build new app button to create a new application. Simply use "Working with Parse as Mobile Backends" as the app name and click Create.
 <img width="1440" alt="Снимок экрана 2022-07-20 в 13 23 25" src="https://user-images.githubusercontent.com/107209053/179959657-70e39205-a1c1-499d-a02e-cff7f350dc27.png">
@@ -24,6 +35,8 @@ To put the first item of the array into Parse, fill in the values of the row lik
 <img width="1440" alt="Снимок экрана 2022-07-20 в 13 55 48" src="https://user-images.githubusercontent.com/107209053/179965664-438e6497-9983-4e25-b00c-36dffe7a3f30.png">
 <img width="1440" alt="Снимок экрана 2022-07-20 в 14 01 41" src="https://user-images.githubusercontent.com/107209053/179966681-f7960504-a46a-41a4-bdcd-8a6beda31d2b.png">
 <img width="641" alt="Снимок экрана 2022-07-20 в 14 49 57" src="https://user-images.githubusercontent.com/107209053/179974991-25a2caa2-2fb2-4bfe-ba05-6b2335e487ad.png">
+
+<a name="2"></a>
 ### Configuring the Xcode Project for Parse
  The very first thing to do is to install the Parse SDK. You can either install it using CocoaPods.
  #### Using CocoaPods
@@ -39,6 +52,7 @@ end
  ```
  CocoaPods should automatically download the Parse SDK and all the required libraries.
  
+ <a name="3"></a>
  ### Connecting with Parse
  To access your app data on Parse, you first need to find out the Application Key and the Client Key. In the dashboard, choose Security & Keys under App Settings.
  Here you can reveal the application ID and client key. Remember to keep these keys safe, as one can access your Parse data with them.
@@ -59,6 +73,7 @@ Parse.initialize(with: configuration)
 ```
 Try to compile and run it. If you get everything correct, you should be able to run the app without any error.
 
+<a name="4"></a>
 ### Retrieving Data from Parse
 The Parse SDK provides a class called PFQuery for retrieving a list of objects ( PFObjects )
 from Parse. The general usage is like this:
@@ -171,6 +186,7 @@ The trip images are no longer bundled in the app. Instead, we will pull them fro
 PFFile to reference the featured image. The class provides the getDataInBackground method to perform the file download in background. Once the download completes, we load it onto the screen.
 Finally, insert this line of code in the ```viewDidLoad()``` method to start the data retrieval: ```loadTripsFromParse()```
 
+<a name="5"></a>
 ### Refreshing Data
 
 Currently, there is no way to refresh the data. Let's add a button to the Trip View Controller in the storyboard. When a user taps the button, the app will go up to Parse and refresh the trip information.
@@ -183,6 +199,8 @@ Next, insert an action method
     loadTripsFromParse()
 }
 ```
+
+<a name="6"></a>
 ### Caching for Speed and Offline Access
 Disable your iPhone or the simulator's network connection and run the app again. 
 The app will not be able to display any trips with the following error in the console:
@@ -199,8 +217,8 @@ In the default setting, caching is disabled. However, you can easily enable it b
 The Parse query supports various types of cache policy. The ```networkElseCache``` policy is just one of them. It first loads data from the network, then if that fails, it loads results from the cache.
 Now compile and run the app again. After you run it once (with WiFi enabled), disable the WiFi or other network connections and launch the app again. 
 This time, your app should be able to show the trips even if the network is unavailable.
-
-### Updating Data on Parse
+<a name="7"></a>
+### Updating Data on Parse 
 
 When you like a trip by tapping the heart button, the result is not saved to the Parse cloud because we haven't written any code for pushing the updates to the cloud.
 With the Parse SDK, it is pretty simple to update a PFObject . Recalled that each
@@ -242,7 +260,7 @@ To upload the update to the Parse cloud, we first call the toPFObject method of 
 PFObject . This is how Parse identifies the object to update.
 Once we have the PFObject , we simply call the saveInBackground method to upload the
 changes to Parse.
-
+<a name="8"></a>
 ### Deleting Data from Parse
 Similarly, PFObject provides various methods for object deletion. In short, you call up the deleteInBackground method of the PBObject class to delete the object from Parse.
 
