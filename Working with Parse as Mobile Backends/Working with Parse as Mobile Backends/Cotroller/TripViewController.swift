@@ -184,3 +184,28 @@ extension TripViewController: TripCollectionCellDelegate {
 }
 
 
+
+extension TripViewController: UIGestureRecognizerDelegate {
+    
+    @objc func handleSwipe(gesture: UISwipeGestureRecognizer) {
+        let point = gesture.location(in: self.collectionView)
+        
+        if (gesture.state == UIGestureRecognizer.State.ended) {
+            if let indexPath = collectionView.indexPathForItem(at: point) {
+                // Remove trip from Parse, array and collection view
+                trips[indexPath.row].toPFObject().deleteInBackground(block: { (success, error) -> Void in
+                    if (success) {
+                        print("Successfully removed the trip")
+                    } else {
+                        print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                        return
+                    }
+                    
+                    self.trips.remove(at: indexPath.row)
+                    
+                })
+            }
+        }
+    }
+    
+}

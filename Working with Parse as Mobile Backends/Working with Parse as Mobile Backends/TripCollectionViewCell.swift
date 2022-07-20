@@ -38,7 +38,6 @@ class TripCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func trashButtonTapped(_ sender: UIButton) {
-        print("r")
         delegate?.didTrashButtonPressed(cell: self)
     }
 }
