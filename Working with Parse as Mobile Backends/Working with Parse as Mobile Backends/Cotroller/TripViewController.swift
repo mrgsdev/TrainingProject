@@ -116,6 +116,7 @@ extension TripViewController {
         trips.removeAll(keepingCapacity: true)
         // Pull data from Parse
         let query = PFQuery(className: "Trip")
+//        query.cachePolicy = PFCachePolicy.networkElseCache // offline
         query.findObjectsInBackground { (objects, error) -> Void in
             if let error = error {
                 print("Error: \(error) \(error.localizedDescription)")
@@ -128,6 +129,7 @@ extension TripViewController {
                     self.trips.append(trip)
                 }
             }
+             
             self.updateSnapshot()
         }
     }
@@ -136,11 +138,46 @@ extension TripViewController {
 
 
 extension TripViewController: TripCollectionCellDelegate {
+    func didTrashButtonPressed(cell: TripCollectionViewCell) {
+        
+        guard let indexPath = collectionView.indexPath(for: cell) else {
+            return
+        }
+        
+        guard let selectedTrip = self.dataSource.itemIdentifier(for: indexPath) else {
+            return
+        }
+        
+        // Delete the trip
+        trips[indexPath.row].toPFObject().deleteInBackground(block: { (success, error) -> Void in
+            if (success) {
+                var snapshot = self.dataSource.snapshot()
+                snapshot.deleteItems([selectedTrip])
+                self.dataSource.apply(snapshot)
+                
+            } else {
+                print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                return
+            }
+
+        })
+
+    }
+    
     
     func didLikeButtonPressed(cell: TripCollectionViewCell) {
         if let indexPath = collectionView.indexPath(for: cell) {
             trips[indexPath.row].isLiked = trips[indexPath.row].isLiked ? false : true
             cell.isLiked = trips[indexPath.row].isLiked
+            
+            // Update the trip on Parse
+            trips[indexPath.row].toPFObject().saveInBackground(block: { (success, error) -> Void in
+                if (success) {
+                    print("Successfully updated the trip")
+                } else {
+                    print("Error: \(error?.localizedDescription ?? "Unknown error")")
+                }
+            })
         }
     }
     
