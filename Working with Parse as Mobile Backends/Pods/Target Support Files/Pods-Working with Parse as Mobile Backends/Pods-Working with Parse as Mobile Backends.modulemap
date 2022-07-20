@@ -1,0 +1,6 @@
+framework module Pods_Working_with_Parse_as_Mobile_Backends {
+  umbrella header "Pods-Working with Parse as Mobile Backends-umbrella.h"
+
+  export *
+  module * { export * }
+}
