@@ -20,7 +20,9 @@ class TripViewController: UIViewController {
     }
     
     private var trips = [Trip]()
-    
+    @IBAction func reloadButtonTapped(sender: Any) {
+        loadTripsFromParse()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         

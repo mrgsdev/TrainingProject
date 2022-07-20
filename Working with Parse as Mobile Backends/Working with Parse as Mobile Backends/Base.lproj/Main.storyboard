@@ -134,10 +134,23 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFj-rv-tyk">
+                                <rect key="frame" x="336" y="54" width="78" height="49.5"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.counterclockwise.icloud" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reloadButtonTappedWithSender:" destination="7Nm-Qh-iXP" eventType="touchUpInside" id="u9s-pB-p6b"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SMy-r8-qNs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="CFj-rv-tyk" firstAttribute="trailing" secondItem="SMy-r8-qNs" secondAttribute="trailing" id="Bht-vg-vs7"/>
+                            <constraint firstItem="CFj-rv-tyk" firstAttribute="top" secondItem="SMy-r8-qNs" secondAttribute="top" constant="10" id="CSu-ov-ihi"/>
                             <constraint firstItem="p9v-AL-M8Y" firstAttribute="centerY" secondItem="V1A-52-fnK" secondAttribute="centerY" id="GsL-fC-GhP"/>
                             <constraint firstItem="mGV-lV-cYl" firstAttribute="top" secondItem="SMy-r8-qNs" secondAttribute="top" constant="11" id="I6c-Ql-tti"/>
                             <constraint firstItem="Xg3-hD-g1n" firstAttribute="leading" secondItem="SMy-r8-qNs" secondAttribute="leading" constant="20" id="Itb-g6-DCk"/>
@@ -160,10 +173,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Re7-a2-To8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89.230769230769226" y="77.488151658767762"/>
+            <point key="canvasLocation" x="88.405797101449281" y="77.008928571428569"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise.icloud" catalog="system" width="128" height="88"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
