@@ -17,6 +17,9 @@
 		42DF176F28897080001CB79D /* CoreDataPreloadDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 42DF176D28897080001CB79D /* CoreDataPreloadDemo.xcdatamodeld */; };
 		42DF177128897092001CB79D /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF177028897092001CB79D /* MenuTableViewController.swift */; };
 		42DF1773288970AF001CB79D /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF1772288970AF001CB79D /* MenuTableViewCell.swift */; };
+		42DF177728897449001CB79D /* CoreDataPreloadDemo.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = 42DF177628897445001CB79D /* CoreDataPreloadDemo.sqlite-wal */; };
+		42DF17782889744D001CB79D /* CoreDataPreloadDemo.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = 42DF177528897445001CB79D /* CoreDataPreloadDemo.sqlite-shm */; };
+		42DF17792889744F001CB79D /* CoreDataPreloadDemo.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 42DF177428897445001CB79D /* CoreDataPreloadDemo.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		42DF176E28897080001CB79D /* CoreDataPreloadDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPreloadDemo.xcdatamodel; sourceTree = "<group>"; };
 		42DF177028897092001CB79D /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		42DF1772288970AF001CB79D /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		42DF177428897445001CB79D /* CoreDataPreloadDemo.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataPreloadDemo.sqlite; sourceTree = "<group>"; };
+		42DF177528897445001CB79D /* CoreDataPreloadDemo.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreDataPreloadDemo.sqlite-shm"; sourceTree = "<group>"; };
+		42DF177628897445001CB79D /* CoreDataPreloadDemo.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CoreDataPreloadDemo.sqlite-wal"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 		42DF175628897044001CB79D /* Parsing CSV and Preloading a SQLite Database Using Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				42DF177428897445001CB79D /* CoreDataPreloadDemo.sqlite */,
+				42DF177528897445001CB79D /* CoreDataPreloadDemo.sqlite-shm */,
+				42DF177628897445001CB79D /* CoreDataPreloadDemo.sqlite-wal */,
 				42DF177028897092001CB79D /* MenuTableViewController.swift */,
 				42DF1772288970AF001CB79D /* MenuTableViewCell.swift */,
 				42DF175728897044001CB79D /* AppDelegate.swift */,
@@ -137,10 +146,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DF17782889744D001CB79D /* CoreDataPreloadDemo.sqlite-shm in Resources */,
 				42DF176428897045001CB79D /* LaunchScreen.storyboard in Resources */,
 				42DF176C28897078001CB79D /* menudata.csv in Resources */,
+				42DF17792889744F001CB79D /* CoreDataPreloadDemo.sqlite in Resources */,
 				42DF176128897045001CB79D /* Assets.xcassets in Resources */,
 				42DF175F28897044001CB79D /* Main.storyboard in Resources */,
+				42DF177728897449001CB79D /* CoreDataPreloadDemo.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
