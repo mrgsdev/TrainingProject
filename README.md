@@ -33,6 +33,7 @@
 - [x] [Carousel-Like User Interface with Paging Support](#26)
 - [x] [Working with Parse as Mobile Backends](#27)
 - [x] [Parsing CSV and Preloading a SQLite Database Using Core Data](#28)
+- [x] [Custom UI Using IBDesignable and IBInspectable](#29)
 <a name="1"></a>
 # [Building Adaptive User Interfaces](https://github.com/mrgsdev/TrainingProject/tree/main/Building%20Adaptive%20User%20Interfaces)
 ![1(1)](https://user-images.githubusercontent.com/107209053/175275772-5fb9ea56-fb58-4c31-93da-b9058fb50868.png) 
@@ -144,5 +145,10 @@
 # [Parsing CSV and Preloading a SQLite Database Using Core Data](https://github.com/mrgsdev/TrainingProject/tree/main/Parsing%20CSV%20and%20Preloading%20a%20SQLite%20Database%20Using%20Core%20Data)
 ![Working with Parse as Mobile Backends](https://user-images.githubusercontent.com/107209053/179983620-2a0b8592-c813-4fe8-9177-ceb140e190ee.png)
 ![Parsing CSV and Preloading a SQLite Database Using Core Data](https://user-images.githubusercontent.com/107209053/180207695-c08b4f7f-65cf-41ba-ba42-a9813659e2d4.png)
+##
+<a name="29"></a>
+# [Custom UI Using IBDesignable and IBInspectable](https://github.com/mrgsdev/TrainingProject/tree/main/Custom%20UI%20Using%20IBDesignable%20and%20IBInspectable)
+![Working with Parse as Mobile Backends](https://user-images.githubusercontent.com/107209053/179983620-2a0b8592-c813-4fe8-9177-ceb140e190ee.png)
+![Custom UI Using IBDesignable and IBInspectable](https://user-images.githubusercontent.com/107209053/180426470-05395815-9194-494b-b40b-22ea5f3f2367.png)
 ##
 
