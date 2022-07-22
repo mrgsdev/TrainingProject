@@ -13,6 +13,7 @@
 		4210247E288AB3EE004F7140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4210247C288AB3EE004F7140 /* Main.storyboard */; };
 		42102480288AB3EF004F7140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4210247F288AB3EF004F7140 /* Assets.xcassets */; };
 		42102483288AB3EF004F7140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42102481288AB3EF004F7140 /* LaunchScreen.storyboard */; };
+		4210248D288AB85D004F7140 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4210248C288AB85D004F7140 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4210247F288AB3EF004F7140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42102482288AB3EF004F7140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42102484288AB3EF004F7140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4210248C288AB85D004F7140 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				42102478288AB3EE004F7140 /* SceneDelegate.swift */,
 				4210247A288AB3EE004F7140 /* ViewController.swift */,
 				4210247C288AB3EE004F7140 /* Main.storyboard */,
+				4210248C288AB85D004F7140 /* CustomButton.swift */,
 				4210247F288AB3EF004F7140 /* Assets.xcassets */,
 				42102481288AB3EF004F7140 /* LaunchScreen.storyboard */,
 				42102484288AB3EF004F7140 /* Info.plist */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4210248D288AB85D004F7140 /* CustomButton.swift in Sources */,
 				4210247B288AB3EE004F7140 /* ViewController.swift in Sources */,
 				42102477288AB3EE004F7140 /* AppDelegate.swift in Sources */,
 				42102479288AB3EE004F7140 /* SceneDelegate.swift in Sources */,
